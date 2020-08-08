@@ -1,20 +1,8 @@
-
-<!-- PROJECT SHIELDS -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT Screenshot -->
 <br />
 <p align="center">
-  <a href="https://github.com/dentedghost/joycontrol_bot_designer">
-    <img src="images/joycontrol_bot_designer_example_small.png" alt="Example Layout of Joycontrol Bot Designer">
-  </a>
+  ![Joycontrol Bot Designer UI](/images/joycontrol_bot_designer_example_smaller)
+</p>
 
   <h3 align="center">Joycontrol Bot Designer</h3>
 
@@ -100,10 +88,21 @@ git clone https://github.com/dentedghost/joycontrol_bot_designer.git
 ```
 
 
-
-
 <!-- USAGE EXAMPLES -->
-## Usage
+## Steps to get up and running
+1. Start joycontrol_rest_api
+* cd joycontrol_rest_api
+* sudo python3 rest.py
+
+2. Start joycontrol_bot_designer webpage UI (Note Virtual Joy Controller works with Bot running)
+* cd joycontrol_bot_designer
+* sudo python3 web.py
+
+3. Start joycontrol_bot_designer bot engine
+* cd joycontrol_bot_designer
+* sudo python3 bot.py
+
+
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
