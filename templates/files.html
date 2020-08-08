@@ -1,0 +1,40 @@
+<!DOCTYPE html> <html> <head>
+    <title>Joycontrol Bot Designer: Script Loader</title>
+</head>
+<body>
+	<div id="container" style="width:960px">
+
+	<div id="header" style="background-color:#3A539B;">
+	<h1 style="margin-bottom:0;">Joycontrol Bot Designer: Script Loader</h1></div>
+
+	<div id="menu" style="background-color:#3A539B;height:800px;width:100px;float:left;text-align:center;">
+        <br><b>Selector Controls</b><br><br>
+<button action="/script/select/load" form="bot_selector" type="submit" value="Select Bot"
+					style="width:90px;height:25px;">Select Bot</button>
+	</div>
+
+	<div id="content" style="background-color:#EEEEEE;height:800px;width:860px;float:left;text-align:left;">
+        <div>
+            <form id="bot_selector"  action="/script/select/load" method="POST">
+
+                {% for file in files %}
+
+                    <input type="radio" name="chosen_script" id="{{ file }}" value="{{ file }}"> {{ file }} </input>
+                    <br>
+    {% endfor %}
+                <br>
+		</form>
+
+        </div>
+        <br>
+	</div>
+
+
+	<div id="footer" style="background-color:#3A539B;clear:both;text-align:center;">
+	<span style=font-family:Arial;>&copy 2020 Steven Miller</span></div>
+
+
+
+</body>
+</html>
+

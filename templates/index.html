@@ -1,0 +1,169 @@
+<!DOCTYPE html> <html> <head>
+    <title>Joycontrol Bot Designer</title>
+</head>
+<body>
+	<div id="container" style="width:960px">
+
+	<div id="header" style="background-color:#3A539B;">
+	<h1 style="margin-bottom:0;">Joycontrol Bot Designer</h1></div>
+
+	<div id="menu" style="background-color:#3A539B;height:500px;width:100px;float:left;text-align:center;">
+	<br><b>Editor Controls</b><br><br>
+		<button formaction="/script/run" form="bot_editor" type="submit" value="Start Bot"
+				style="width:90px;height:25px;" name="btn">Start Bot</button>
+		<p></p>
+		<button formaction="/script/stop" form="bot_editor" type="submit" value="Stop Bot"
+				style="width:90px;height:25px;" name="btn">Stop Bot</button>
+		<p></p>
+		<form action="/script/choose" method="POST">
+					<button style="width:90px;height:25px;" value="Choose Bot">Choose Bot</button>
+		</form>
+		<p></p>
+		<button formaction="/script/save" form="bot_editor" type="submit" value="Save Bot"
+				style="width:90px;height:25px;" name="btn">Save Bot</button>
+		<br><p />
+<b>Switch</b><br />
+		<button formaction="/controller/connect" form="bot_editor" type="submit" value="ON"
+					style="width:90px;height:25px;" name="btn">Connect</button>
+		<p></p>
+		<button formaction="/controller/disconnect" form="bot_editor" type="submit" value="OFF"
+					style="width:90px;height:25px;" name="btn">Disconnect</button>
+        <br>
+	<br>
+	</div>
+
+	<div id="content" style="background-color:#EEEEEE;height:500px;width:560px;float:left;text-align:center;">
+        <div><br>Bot Editor<br>
+		<form id="bot_editor" method="POST">
+			<textarea name="script" rows="25" cols="60" style="resize:none;">{{script}}</textarea><br>
+			<input type="hidden" id="script_name" name="script_name" value="{{script_name}}">
+		</form>
+			Script: {{script_name}}
+
+        </div>
+        <br>
+	</div>
+	 <div id="content" style="background-color:#EEEEEE;height:500px;width:300px;float:left;">
+		 <table style="width: 60%;margin:auto;text-align: center;">
+		<caption>Joy Controller</caption>
+		<tr>
+			<td></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="zl">ZL</button></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;</td>
+			<td></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="zr">ZR</button></td>
+			<td></td>
+		</tr>
+			 <tr>
+			<td></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="l">L</button></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;</td>
+			<td></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="r">R</button></td>
+			<td></td>
+		</tr>
+			<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value=""></button></td>
+			<td><button formaction="/btn/stick" form="bot_editor" name="btn" value="ls_up,100">↑</button></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value=""></button></td>
+			<td></td>
+			<td></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="x">X</button></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><button formaction="/btn/stick" form="bot_editor" name="btn" value="ls_left,100">←</button></td>
+			<td><button formaction="/btn/stick" form="bot_editor" name="btn" value="l_stick">●</button></td>
+			<td><button formaction="/btn/stick" form="bot_editor" name="btn" value="ls_right,100">→</button></td>
+			<td></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="y">Y</button></td>
+			<td></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="a">A</button></td>
+		</tr>
+		<tr>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value=""></button></td>
+			<td><button formaction="/btn/stick" form="bot_editor" name="btn" value="ls_down,100">↓</button></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value=""></button></td>
+			<td></td>
+			<td></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="b">B</button></td>
+			<td></td>
+		</tr>
+			<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="up">▲</button></td>
+			<td></td>
+			<td></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value=""></button></td>
+			<td><button formaction="/btn/stick" form="bot_editor" name="btn" value="rs_up,100">↑</button></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value=""></button></td>
+		</tr>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="left">◀</button></td>
+			<td></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="right">▶</button></td>
+			 <td></td>
+			<td><button formaction="/btn/stick" form="bot_editor" name="btn" value="rs_left,100">←</button></td>
+			<td><button formaction="/btn/stick" form="bot_editor" name="btn" value="r_stick">●</button></td>
+			<td><button formaction="/btn/stick" form="bot_editor" name="btn" value="rs_right,100">→</button></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="down">▼</button></td>
+			<td></td>
+			<td></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value=""></button></td>
+			<td><button formaction="/btn/stick" form="bot_editor" name="btn" value="rs_down,100">↓</button></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value=""></button></td>
+		</tr>
+
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+			 <tr>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="minus">-</button></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="plus">＋</button></td>
+			<td></td>
+			<td><button formaction="/btn/combo" form="bot_editor" name="btn" value='l,r'>L+R</button></td>
+			<td></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="capture">C</button></td>
+			<td><button formaction="/btn" form="bot_editor" name="btn" value="home">H</button></td>
+		</tr>
+	</table>
+
+         </div>
+
+
+	<div id="footer" style="background-color:#3A539B;clear:both;text-align:center;">
+	<span style=font-family:Arial;>&copy 2020 Steven Miller</span></div>
+
+
+
+</body>
+</html>
+
