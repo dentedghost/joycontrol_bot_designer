@@ -1,10 +1,9 @@
-<!-- PROJECT Screenshot -->
-<br />
+ <h3 align="center">Joycontrol Bot Designer</h3>
+
 <p align="center">
-  ![Joycontrol Bot Designer UI](/images/joycontrol_bot_designer_example_smaller.png)
+  ![Joycontrol Bot Designer UI](images/joycontrol_bot_designer_example_smaller.png?raw=true "Title")
 </p>
 
-  <h3 align="center">Joycontrol Bot Designer</h3>
 
   <p align="center">
     Joycontrol Bot Designer is built upon the greatness [joycontrol](https://github.com/mart1nro/joycontrol), 
