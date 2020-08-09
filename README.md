@@ -1,7 +1,7 @@
  <h3 align="center">Joycontrol Bot Designer</h3>
 
 <p align="center">
-  ![Joycontrol Bot Designer UI](images/joycontrol_bot_designer_example_smaller.png?raw=true "Title")
+  ![Joycontrol Bot Designer UI](https://github.com/dentedghost/joycontrol_bot_designer/blob/master/images/joycontrol_bot_designer_example_smaller.png?raw=true)
 </p>
 
 
