@@ -1,31 +1,14 @@
- <h3 align="center">Joycontrol Bot Designer</h3>
+###  Joycontrol Bot Designer
 
-<p align="center">
-  ![Joycontrol Bot Designer UI](https://github.com/dentedghost/joycontrol_bot_designer/blob/master/images/joycontrol_bot_designer_example_smaller.png?raw=true)
-</p>
+![Joycontrol Bot Designer UI](/images/joycontrol_bot_designer_example_smaller.png)
 
+Joycontrol Bot Designer is built upon the greatness [joycontrol](https://github.com/mart1nro/joycontrol), [joycontrol_rest_api](https://github.com/choss/joycontrol_rest_api) with inspiration from [RasCon](https://github.com/SkyoKen/RasCon_NS).
 
-  <p align="center">
-    Joycontrol Bot Designer is built upon the greatness [joycontrol](https://github.com/mart1nro/joycontrol), 
-    [joycontrol_rest_api] (https://github.com/choss/joycontrol_rest_api) with inspiration from 
-    [RasCon] (https://github.com/SkyoKen/RasCon_NS).
-    The project is guided the goal of making boting (automating) fun and easy so you'll be interested in learning to code
-    or just improve your existing coding skills.
-    <br />
-    <a href="https://github.com/dentedghost/joycontrol_bot_designer"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/dentedghost/joycontrol_bot_designer">View Demo</a>
-    ·
-    <a href="https://github.com/dentedghost/joycontrol_bot_designer/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/dentedghost/joycontrol_bot_designer/issues">Request Feature</a>
-  </p>
-</p>
+The project is guided the goal of making boting (automating) fun and easy so you'll be interested in learning to code or just improve your existing coding skills.
 
+- Quality matters!!  If you happen to find a bug please [Report it](https://github.com/dentedghost/joycontrol_bot_designer/issues)
+- Have a great idea or feature request?  Please [Share it](https://github.com/dentedghost/joycontrol_bot_designer/issues")
 
-
-<!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
 * [About the Project](#about-the-project)
@@ -41,16 +24,13 @@
 * [Acknowledgements](#acknowledgements)
 
 
-
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Automation is a passion of mine.  I previously taught a Bot Programming course as part of a Quality Assurance degree at [Niacc.edu](https://www.niacc.edu/).  From that course I was inspired to write the book [Bot Programming: Intelligent Automation For Windows Applications And Games](https://www.amazon.com/Bot-Programming-Intelligent-Automation-Applications/dp/1453855963).
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo`, `twitter_handle`, `email`
+While playing some games on Nintendo switch,  I had the itch of "oh I wonder if I can automate this"?  Lucky for me other's have done all the heavy lifting.
 
+The next question was how can I leverage this project to help others.  Just like when I taught Bot Programming,  some times the hardest part of education is to give someone a reason to learn that inspires them with a burning passion.  Being able to create Bots for some is exactly that nudge need to learn.
 
 ### Built With
 
@@ -59,8 +39,6 @@ Here's a blank template to get started:
 * [Raspbian GNU/Linux 10 (buster)](https://www.raspberrypi.org/blog/buster-the-new-version-of-raspbian/)
 
 
-
-<!-- GETTING STARTED -->
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
@@ -68,15 +46,14 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 Install awesome projects that enabled Joycontrol Bot Designer:
-* [joycontrol] (https://github.com/mart1nro/joycontrol#installation)
-* [joycontrol_rest_api] (https://github.com/choss/joycontrol_rest_api#package-requirements)
+* [joycontrol](https://github.com/mart1nro/joycontrol#installation)
+* [joycontrol_rest_api](https://github.com/choss/joycontrol_rest_api#package-requirements)
 
 Install libraries:
+
 ```sh
-```
 sudo apt install apache2
 sudo pip3 install flask hid aioconsole crc8
-```
 ```
 
 ### Installation
@@ -86,8 +63,6 @@ sudo pip3 install flask hid aioconsole crc8
 git clone https://github.com/dentedghost/joycontrol_bot_designer.git
 ```
 
-
-<!-- USAGE EXAMPLES -->
 ## Steps to get up and running
 1. Start joycontrol_rest_api
 * cd joycontrol_rest_api
@@ -101,18 +76,41 @@ git clone https://github.com/dentedghost/joycontrol_bot_designer.git
 * cd joycontrol_bot_designer
 * sudo python3 bot.py
 
+## Boting Basics
 
+PRINT- Individually press a button (Capitalization is ignore)
+a
+X
+A
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+PRINT - This is how you print/display something to the screen
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+PRINT - Wait a specific amount in milliseconds (1000 = 1 second)
+1000
 
+PRINT - Wait a random about of time between to values (Simulates real users)
+waitrandom 1000 2000
+
+PRINT - Do the same thing over and over a specific amount of times in a loop
+FOR 5
+waitrandom 500 750
+Y
+NEXT
+
+PRINT - Nest loops.  Outer loop will run X amount of times and inner loop will loop Y each time X runs
+PRINT - Outer 5 times and Inner 5*2=10 times
+FOR 5
+PRINT Outer
+For 2
+PRINT Inner
+NEXT
+NEXT
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/github_username/repo/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/dentedghost/joycontrol_bot_designer/issues) for a list of proposed features (and known issues).
 
 
 
@@ -134,22 +132,20 @@ Contributions are what make the open source community such an amazing place to b
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@ghostcanoe](https://twitter.com/ghostcanoe) - dentedghost@gmail.com
+Your Name - [@ghostcanoe](https://twitter.com/ghostcanoe)
 
 Project Link: [https://github.com/github_username/repo](https://github.com/github_username/repo)
-
-
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
+* [Nintendo Switch Reverse Engineering](https://github.com/dekuNukem/Nintendo_Switch_Reverse_Engineering)
 * [joycontrol](https://github.com/mart1nro/joycontrol)
-* [joycontrol_rest_api] (https://github.com/choss/joycontrol_rest_api)
-* [RasCon] (https://github.com/SkyoKen/RasCon_NS)
-* [Best-README-Template] (https://github.com/othneildrew/Best-README-Template)
+* [joycontrol_rest_api](https://github.com/choss/joycontrol_rest_api)
+* [RasCon](https://github.com/SkyoKen/RasCon_NS)
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+* [Markdown Editor](https://markdown-editor.github.io/)
 
