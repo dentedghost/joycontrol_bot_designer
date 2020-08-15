@@ -64,6 +64,19 @@ def disconnect():
     msg, script_contents = default()
     return render_template('index.html', msg=msg, script=script_contents, script_name=script_filename)
 
+@app.route('/controller/status', methods=['POST'])
+def controller_status():
+    script_filename, script_contents, endpoint, msg = '', '', '', ''
+    if request.method == 'POST':
+        script_filename = request.form['script_name']
+        endpoint = "controller/status"
+        curl_request = CurlClient(endpoint)
+        curl_request.curl_get()
+        msg = curl_request.response_body
+        print("Response body")
+
+    return render_template('index.html', msg=msg, script=script_contents, script_name=script_filename)
+
 
 @app.route('/btn/combo', methods=['POST'])
 def btn_combo():

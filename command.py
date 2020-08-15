@@ -38,6 +38,7 @@ class CCLI():
         #     self._available_buttons = {'plus', 'l_stick', 'capture',
         #                                'down', 'up', 'right', 'left', 'sr', 'sl', 'l', 'zl'}
         self.available_sticks = {'ls', 'rs'}
+        self.available_cmds = {'print', 'buttonrandom', 'waitrandom'}
         self.script = False
 
     async def write(self, msg):
@@ -82,8 +83,10 @@ class CCLI():
         if not buttons:
             raise ValueError('No Buttons were given.')
 
+        print(f'button_push buttons {buttons}')
         for button in buttons:
             # push button
+            print(f'button_push button {button}')
             endpoint = "controller/button/press/" + button
             curl_request = CurlClient(endpoint)
             curl_request.curl_patch()  # Slight delay between requests
@@ -104,7 +107,7 @@ class CCLI():
     async def pressButton(self, *commands):
         for command in commands:
             print(f'commands {commands}')
-            cmd, *args = command.split()
+            cmd, *args = command.split(None, 1)
 
             print(f'cmd args {cmd} {args}')
             if cmd in self.available_sticks:
@@ -117,12 +120,22 @@ class CCLI():
             elif cmd == 'wait':
                 await asyncio.sleep(float(args[0]) / 1000)
             elif cmd == 'waitrandom':
-                if args[0].isdecimal and args[1].isdecimal:
-                    random_wait = random.randint(int(args[0]), (int(args[1]) + 1))
+                start_time, end_time = args[0].split()
+                if start_time.isdecimal and end_time.isdecimal:
+                    random_wait = random.randint(int(start_time), (int(end_time) + 1))
                     print(f'rand wait {random_wait}')
                     await asyncio.sleep(float(random_wait) / 1000)
                 else:
-                    print(f'command waitrandom args need to be int {args[0]} {args[1]}')
+                    print(f'command waitrandom args need to be int {start_time} {end_time}')
+            elif cmd == 'buttonrandom':
+                buttons = [x.strip() for x in args[0].split(',')]
+                button_count = len(buttons)
+                button_index = random.randint(0, button_count-1)
+                chosen_button = buttons[button_index]
+                print(f'buttons index chosen {buttons} {button_index},{chosen_button}')
+                if chosen_button and not chosen_button.isspace():
+                    print(f'buttonrandom button  {chosen_button}')
+                    await self.button_push(chosen_button)
             elif cmd == 'print':
                 print(args[0])
             else:
@@ -213,9 +226,8 @@ class CCLI():
                 self.available_sticks or
                 cmd in self.available_buttons or
                 cmd.isdecimal() or
-                cmd == 'print' or
-                cmd == 'wait' or
-                cmd == 'waitrandom')
+                cmd or
+                cmd in self.available_cmds)
 
     def forCheck(self, n, user_input):
         commands = []
