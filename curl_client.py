@@ -1,5 +1,6 @@
 import json
 import pycurl
+from io import BytesIO
 try:
     from StringIO import StringIO
 except ImportError:
@@ -13,6 +14,8 @@ class CurlClient:
         self.endpoint = endpoint
         self.body = body
         self.verbose = False
+        self.response_buffer = BytesIO()
+        self.response_body = ''
 
     def curl_post(self):
         curl = pycurl.Curl()
@@ -50,15 +53,33 @@ class CurlClient:
         curl.setopt(pycurl.URL, self.url + self.endpoint)
         curl.setopt(pycurl.HTTPHEADER, self.header)
         curl.setopt(pycurl.FOLLOWLOCATION, 1)
+        curl.setopt(pycurl.WRITEFUNCTION, self.response_buffer.write)
 
-        if self.verbose:
-            # depending on whether you want to print details on stdout, uncomment either
-            curl.setopt(pycurl.VERBOSE, 1)  # to print entire request flow
-        else:
-            # or
-            curl.setopt(pycurl.WRITEFUNCTION, lambda x: None)  # to keep stdout clean
+        # if self.verbose:
+        #     # depending on whether you want to print details on stdout, uncomment either
+        #     curl.setopt(pycurl.VERBOSE, 1)  # to print entire request flow
+        # else:
+        #     # or
+        #     curl.setopt(pycurl.WRITEFUNCTION, lambda x: None)  # to keep stdout clean
 
         curl.perform()
+
+
+        # buff = BytesIO()
+        # # decode the returned data to the correct type
+        # body = buff.getvalue().decode(self.encoding())
+
+        # or
+
+        self.response_body = self.response_buffer.getvalue()
+        #print(self.response_buffer)
+        #responseText = curlResponseBuffer.getvalue()
+
+        # logging.info ('the type of the responseText is:' + str(type(responseText)))
+        # logging.info ('after it becomes a string:' + str(type(str(responseText))))
+
+        # output.getvalue().decode("utf8")
+
 
         # you may want to check HTTP response code, e.g.
         status_code = curl.getinfo(pycurl.RESPONSE_CODE)
