@@ -1,0 +1,80 @@
+PRINT MP Porsche 911 Targa 4s
+For 100
+
+PRINT Race Porsche 911 Targa 4s - 5 times
+
+FOR 5
+
+PRINT Choose Car
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT WAIT 4 Start
+15000
+
+PRINT RACE Car
+FOR 20
+PRINT OUTER LOOP
+FOR 6
+PRINT INNER LOOP
+waitrandom 1500 1750
+Y
+waitrandom 1500 1750
+right
+NEXT
+NEXT
+
+PRINT WAIT 4 Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished Porsche 911 Targa 4s - 5 times
+
+PRINT Wait to Refill
+FOR 12
+PRINT OUTER LOOP
+FOR 3
+PRINT INNER LOOP
+waitrandom 3000 4000
+Y
+waitrandom 3000 4000
+Y
+NEXT
+NEXT
+
+NEXT
+PRINT Finished MP Porsche 911 Targa 4s

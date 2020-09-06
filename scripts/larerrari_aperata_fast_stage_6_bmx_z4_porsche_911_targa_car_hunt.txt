@@ -1,0 +1,85 @@
+PRINT Lafferi Porsche 911 Targa Car run
+For 1
+
+PRINT Race CAR Acura - 5 times
+
+FOR 8
+
+
+PRINT CAR Acura
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT START CAR
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+PRINT an Extra to be sure and it doesn't hurt
+a
+WAIT 2000
+
+PRINT WAIT for Start
+14000
+
+PRINT RACE Car
+
+FOR 40
+WAIT 500
+Y
+WAIT 500
+left
+NEXT
+
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+waitrandom 2000 2250
+b
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 2000 2250
+a
+PRINT Missions
+waitrandom 2000 2250
+a
+waitrandom 2000 2250
+PRINT Get Rewards
+waitrandom 2000 2250
+a
+waitrandom 2000 2250
+PRINT Accept Rewards
+waitrandom 2000 2250
+a
+waitrandom 2000 2250
+PRINT Complete Race
+waitrandom 2000 2250
+a
+waitrandom 2000 2250
+
+PRINT Refocus
+waitrandom 2000 2250
+b
+waitrandom 2000 2250
+a
+waitrandom 2000 2250
+a
+waitrandom 2000 2250
+
+PRINT Refocus
+waitrandom 2000 2250
+b
+waitrandom 2000 2250
+a
+waitrandom 2000 2250
+a
+waitrandom 2000 2250
+
+
+NEXT
+
+
+NEXT
+PRINT Finished Hunt TVR Griffith with one car

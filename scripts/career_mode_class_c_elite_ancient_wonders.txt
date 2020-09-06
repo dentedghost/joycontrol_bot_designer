@@ -1,0 +1,346 @@
+PRINT Career Mode Class C Elite Ancient Wonders Racing Suite
+For 200
+
+PRINT Race CAR Mercedes-Benz AMG GT S - 6 times
+
+FOR 6
+
+PRINT Choose Track
+waitrandom 1000 2000
+ls up,100
+waitrandom 1000 2000
+ls up,100
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+PRINT CAR Mercedes-Benz AMG GT S
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+PRINT START CAR
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+PRINT an Extra to be sure and it doesn't hurt
+a
+waitrandom 1000 2000
+
+PRINT WAIT for Start
+10000
+
+PRINT RACE Car
+FOR 13
+PRINT OUTER LOOP
+FOR 6
+PRINT INNER LOOP
+waitrandom 1000 1250
+Y
+NEXT
+NEXT
+
+PRINT WAIT for Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished Racing Mercedes-Benz AMG GT S - 6 times
+
+
+PRINT Race CAR BMW M4 GTS - 6 times
+
+FOR 6
+
+PRINT Choose Track
+waitrandom 1000 2000
+ls up,100
+waitrandom 1000 2000
+ls up,100
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+PRINT CAR BMW M4 GTS - 6 times
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+down
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+PRINT START CAR
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+PRINT an Extra to be sure and it doesn't hurt
+a
+waitrandom 1000 2000
+
+PRINT WAIT for Start
+10000
+
+PRINT RACE Car
+FOR 13
+PRINT OUTER LOOP
+FOR 6
+PRINT INNER LOOP
+waitrandom 1000 1250
+Y
+NEXT
+NEXT
+
+PRINT WAIT for Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished Racing BMW M4 GTS - 6 times
+
+
+PRINT Race CAR Acura 2017 NSX - 5 times
+
+FOR 5
+
+PRINT Choose Track
+waitrandom 1000 2000
+ls up,100
+waitrandom 1000 2000
+ls up,100
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+PRINT CAR Acura 2017 NSX
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+
+PRINT START CAR
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+PRINT an Extra to be sure and it doesn't hurt
+a
+waitrandom 1000 2000
+
+PRINT WAIT for Start
+10000
+
+PRINT RACE Car
+FOR 13
+PRINT OUTER LOOP
+FOR 6
+PRINT INNER LOOP
+waitrandom 1000 1250
+Y
+NEXT
+NEXT
+
+PRINT WAIT for Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished Racing Acura 2017 NSX - 5 times
+
+PRINT Race CAR Acura 2017 NSX - 5 times
+
+FOR 5
+
+PRINT Choose Track
+waitrandom 1000 2000
+ls up,100
+waitrandom 1000 2000
+ls up,100
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+PRINT CAR Acura 2017 NSX
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+
+PRINT START CAR
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+PRINT an Extra to be sure and it doesn't hurt
+a
+waitrandom 1000 2000
+
+PRINT WAIT for Start
+10000
+
+PRINT RACE Car
+FOR 13
+PRINT OUTER LOOP
+FOR 6
+PRINT INNER LOOP
+waitrandom 1000 1250
+Y
+NEXT
+NEXT
+
+PRINT WAIT for Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished Racing Acura 2017 NSX - 5 times
+
+
+
+PRINT Race Car Arrinera Hussarya 33 - 4 times
+
+FOR 4
+
+PRINT Choose Track
+waitrandom 1000 2000
+ls up,100
+waitrandom 1000 2000
+ls up,100
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+PRINT Car Arrinera Hussarya 33
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+down
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+
+PRINT START CAR
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+PRINT an Extra to be sure and it doesn't hurt
+a
+waitrandom 1000 2000
+
+PRINT WAIT for Start
+10000
+
+PRINT RACE Car
+FOR 13
+PRINT OUTER LOOP
+FOR 6
+PRINT INNER LOOP
+waitrandom 1000 1250
+Y
+NEXT
+NEXT
+
+PRINT WAIT for Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished Racing Arrinera Hussarya 33 - 4 times
+
+NEXT
+PRINT Finished Career Mode Class C Elite Ancient Wonders Racing Suite

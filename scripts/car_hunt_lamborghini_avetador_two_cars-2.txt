@@ -1,0 +1,161 @@
+PRINT car_hunt_lamborghini_avetador
+For 200
+
+PRINT Race Apollo - 4 times
+
+FOR 4
+
+
+PRINT CAR 1
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT START CAR
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+PRINT an Extra to be sure and it doesn't hurt
+a
+WAIT 2000
+
+PRINT WAIT for Start
+14000
+
+PRINT Exact RACE Car
+
+PRINT LEG1
+FOR 11
+WAIT 500
+Y
+WAIT 500
+LEFT
+NEXT
+
+
+PRINT LEG2
+FOR 6
+WAIT 300
+Y
+WAIT 200
+RIGHT
+NEXT
+
+PRINT LEG3
+FOR 14
+WAIT 500
+Y
+WAIT 500
+NEXT
+
+
+PRINT WAIT for Race to Finish
+30000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+PRINT Get Rewards
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+PRINT Accept Rewards
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+PRINT Complete Race
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+
+
+NEXT
+
+PRINT Choose to Race
+waitrandom 2000 3000
+left
+waitrandom 2000 3000
+left
+
+
+PRINT Pause Between Races
+6000
+
+
+FOR 4
+
+
+PRINT CAR Grand Sport NSX
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT START CAR
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+PRINT an Extra to be sure and it doesn't hurt
+a
+WAIT 2000
+
+PRINT WAIT for Start
+14000
+
+PRINT Exact RACE Car
+
+FOR 40
+WAIT 500
+Y
+WAIT 500
+
+NEXT
+
+
+PRINT WAIT for Race to Finish
+30000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+PRINT Get Rewards
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+PRINT Accept Rewards
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+PRINT Complete Race
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+
+NEXT
+
+PRINT Choose to Race
+waitrandom 2000 3000
+right
+waitrandom 2000 3000
+right
+
+
+NEXT
+PRINT Finished Career Mode Class C Elite Ancient Wonders Racing Suite

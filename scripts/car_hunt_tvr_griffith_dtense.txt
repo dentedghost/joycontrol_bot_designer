@@ -1,0 +1,99 @@
+PRINT Car Hunt TVR Griffith with one car
+For 300
+
+PRINT Race CAR DS E-tense - 6 times
+
+FOR 1
+
+
+PRINT CAR DS E-tense
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT START CAR
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+PRINT an Extra to be sure and it doesn't hurt
+a
+WAIT 2000
+
+PRINT WAIT for Start
+14000
+
+PRINT RACE Car
+
+
+FOR 6
+WAIT 1000
+Y
+WAIT 1000
+buttonrandom left, right, , , 
+NEXT
+
+
+FOR 16
+WAIT 500
+Y
+WAIT 500
+left
+NEXT
+
+FOR 20
+WAIT 500
+Y
+WAIT 500
+right
+NEXT
+
+FOR 10
+WAIT 2000
+Y
+NEXT
+
+PRINT WAIT for Race to Finish
+30000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+PRINT Get Rewards
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+PRINT Accept Rewards
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+PRINT Complete Race
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+PRINT Refocus
+waitrandom 4000 5000
+b
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+PRINT WAIT for another ticket 8 minutes
+FOR 9
+WAIT 30000
+Y
+NEXT
+
+
+NEXT
+
+
+NEXT
+PRINT Finished Hunt TVR Griffith with one car

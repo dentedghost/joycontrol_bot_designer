@@ -1,0 +1,167 @@
+
+#<<动森巴列岛刷amiibo>>
+#———————准备工作———————
+#上巴列岛进屋子里
+#收起手上的工具
+#———————使用方法———————
+#批量刷amiibo请跳转页面去自动生成脚本
+#该脚本仅为测试用
+#运行前先确定file/amiibo目录下是否有[ac]_001_-_isabelle.bin该文件
+
+DOWN
+2000
+
+Y
+AMIIBO [ac]_001_-_isabelle.bin
+FOR 3
+2000
+A
+NEXT
+
+B
+2000
+B
+
+
+
+#<<动森巴列岛刷amiibo>>
+#———————准备工作———————
+#上巴列岛进屋子里
+#收起手上的工具
+#———————使用方法———————
+#批量刷amiibo请跳转页面去自动生成脚本
+#该脚本仅为测试用
+#运行前先确定file/amiibo目录下是否有[ac]_001_-_isabelle.bin该文件
+
+DOWN
+2000
+
+Y
+AMIIBO [ac]_001_-_isabelle.bin
+FOR 3
+2000
+A
+NEXT
+
+B
+2000
+B
+
+
+Precautions
+1. Make sure the area to be filled is rectangular with no debris inside
+2. Start at the bottom left corner of the rectangle
+3. Face up to the grid to be dug
+FOR 1 #Number of rows to dig/2
+PRINT Start digging a row to the right
+A
+2000
+FOR 4 #Number of columns to dig-1
+LS RIGHT, 410
+100
+LS UP, 100
+100
+LS UP, 100
+150
+A
+2000
+NEXT
+LS UP, 450
+PRINT starts digging a row to the left
+A
+2000
+FOR 4 #Number of columns to be digged -1
+LS LEFT, 410
+100
+LS UP, 100
+100
+LS UP, 100
+150
+A
+2000
+NEXT
+LS UP, 450
+NEXT
+PRINT
+
+
+1. Make sure the area to be filled is rectangular with no debris inside
+2. Start at the upper left corner of the rectangle
+3. Face up to the grid to be filled
+FOR 1 #Number of rows to fill/2
+PRINT Start to fill a row to the right
+A
+2000
+FOR 4 #Number of columns to fill-1
+LS RIGHT, 410
+100
+LS UP, 100
+100
+LS UP, 100
+150
+A
+2000
+NEXT
+LS DOWN, 600
+LS UP, 300
+PRINT Start to fill a row to the left
+A
+2000
+FOR 4 #Number of columns to be filled -1
+LS LEFT, 410
+100
+LS UP, 100
+100
+LS UP, 100
+150
+A
+2000
+NEXT
+LS DOWN, 600
+LS UP, 300
+NEXT
+PRINT Completed
+
+Ready to work
+1. Find a place where you can watch the meteor shower
+2. Put away the tools in your hand and click RUN
+Instructions
+Copy directly to use
+Just set the number behind FOR (one cycle is about 0.5s)
+FOR 7200
+RS UP, 100
+100
+A
+150
+print A
+NEXT
+print end
+
+
+Ready to work
+1. The store points to the item you want to buy (the kind that can buy 5 at a time)
+2. Click RUN
+Instructions
+Copy directly to use
+Set the number of purchases after FOR
+For 6 #Number of purchases
+A
+30
+B
+540
+A
+500
+DOWN
+30
+A
+550
+B
+350
+A
+70
+B
+520
+A
+600
+Next
+

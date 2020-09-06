@@ -1,0 +1,600 @@
+PRINT MP World Series Gold
+For 100
+
+PRINT World Series Gold - Limit to 5 refill cars Beast 1
+
+FOR 5
+
+PRINT Choose Car
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT WAIT 4 Start
+15000
+
+PRINT RACE Car
+
+FOR 30
+PRINT INNER LOOP
+waitrandom 500 750
+Y
+230
+Y
+waitrandom 1000 1750
+right
+NEXT
+
+
+PRINT WAIT 4 Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished World Series Gold - Beast 1
+
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+
+PRINT World Series Gold - Limit to 5 refill cars NSX  - 2
+
+FOR 5
+
+PRINT Choose Car
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT WAIT 4 Start
+15000
+
+PRINT RACE Car
+
+FOR 30
+PRINT INNER LOOP
+waitrandom 500 750
+Y
+230
+Y
+waitrandom 1000 1750
+right
+NEXT
+
+
+PRINT WAIT 4 Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished World Series Gold - Limit to 4 refill cars 2
+
+waitrandom 4000 5000
+down
+waitrandom 4000 5000
+
+
+PRINT World Series Gold - Limit to 5 refill cars Maserati  - 3
+
+FOR 5
+
+PRINT Choose Car
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT WAIT 4 Start
+15000
+
+PRINT RACE Car
+
+FOR 30
+PRINT INNER LOOP
+waitrandom 500 750
+Y
+230
+Y
+waitrandom 1000 1750
+right
+NEXT
+
+
+PRINT WAIT 4 Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished World Series Gold - refill cars 3
+
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+
+
+PRINT World Series Gold - Limit to 4 refill cars Hussarya  - 4
+
+FOR 4
+
+PRINT Choose Car
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT WAIT 4 Start
+15000
+
+PRINT RACE Car
+
+FOR 30
+PRINT INNER LOOP
+waitrandom 500 750
+Y
+230
+Y
+waitrandom 1000 1750
+right
+NEXT
+
+
+PRINT WAIT 4 Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished World Series Gold - Limit to 4 refill cars 4
+
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+waitrandom 4000 5000
+up
+waitrandom 4000 5000
+
+
+PRINT World Series Gold - Grand Sport Limit to 4 refill cars 5
+
+FOR 4
+
+PRINT Choose Car
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT WAIT 4 Start
+15000
+
+PRINT RACE Car
+
+FOR 30
+PRINT INNER LOOP
+waitrandom 500 750
+Y
+230
+Y
+waitrandom 1000 1750
+right
+NEXT
+
+
+PRINT WAIT 4 Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished World Series Gold - Limit to 4 refill cars 5
+
+
+waitrandom 4000 5000
+down
+waitrandom 4000 5000
+
+
+PRINT World Series Gold - Aston Limit to 4 refill cars 6
+
+FOR 4
+
+PRINT Choose Car
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT WAIT 4 Start
+15000
+
+PRINT RACE Car
+
+FOR 30
+PRINT INNER LOOP
+waitrandom 500 750
+Y
+230
+Y
+waitrandom 1000 1750
+right
+NEXT
+
+
+PRINT WAIT 4 Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished World Series Gold - Limit to 4 refill cars 6
+
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+
+
+
+PRINT World Series Gold - Apollo Limit to 4 refill cars 7
+
+FOR 4
+
+PRINT Choose Car
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT WAIT 4 Start
+15000
+
+PRINT RACE Car
+
+FOR 30
+PRINT INNER LOOP
+waitrandom 500 750
+Y
+230
+Y
+waitrandom 1000 1750
+right
+NEXT
+
+
+PRINT WAIT 4 Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished World Series Gold - Limit to 4 refill cars 7
+
+
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+
+
+PRINT World Series Gold - Huracan Limit to 4 refill cars 8
+
+FOR 4
+
+PRINT Choose Car
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT WAIT 4 Start
+15000
+
+PRINT RACE Car
+
+FOR 30
+PRINT INNER LOOP
+waitrandom 500 750
+Y
+230
+Y
+waitrandom 1000 1750
+right
+NEXT
+
+
+PRINT WAIT 4 Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished World Series Gold - Limit to 4 refill cars 8
+
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+up
+
+
+NEXT
+PRINT Finished MP World Series Gold - Limit to 4 refill cars

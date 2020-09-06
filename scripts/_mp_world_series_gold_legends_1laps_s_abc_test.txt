@@ -1,0 +1,174 @@
+PRINT MP World Series Gold
+For 300
+
+PRINT World Series Gold - Pagani- 1
+
+
+PRINT Move to next car
+waitrandom 4000 5000
+down
+
+
+
+PRINT World Series Gold - Ferrai Laferrari Aperat- 2
+
+
+PRINT Move to next car
+waitrandom 4000 5000
+left
+
+
+PRINT World Series Gold - Aventador J- 3
+
+
+PRINT Move to next car
+waitrandom 4000 5000
+up
+
+
+PRINT World Series Gold - McLaren 570s- 4
+
+
+
+PRINT Move to next car
+waitrandom 4000 5000
+left
+
+
+
+PRINT World Series Gold - VForce- 5
+
+
+PRINT Move to next car
+waitrandom 4000 5000
+down
+
+
+
+
+
+PRINT World Series Gold - Porsche Spyder- 6
+
+
+
+PRINT Move to next car
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+up
+
+
+
+
+
+PRINT World Series Gold - Aventador SV Coupe- 7
+
+
+
+PRINT Move to next car
+waitrandom 4000 5000
+left
+
+
+
+
+
+
+PRINT World Series Gold - Farrari Laferrari- 8
+
+
+
+PRINT Move to next car
+waitrandom 4000 5000
+down
+
+
+
+
+PRINT World Series Gold - P1- 9
+
+
+
+PRINT Move to next car
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+up
+
+
+
+PRINT World Series Gold - J50- 10
+
+
+
+PRINT Move to next car
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+down
+
+
+
+
+
+
+PRINT World Series Gold - Huracan - 11
+
+
+
+PRINT Move to next car
+waitrandom 4000 5000
+left
+
+
+
+
+
+PRINT World Series Gold - Apollo - 12
+
+
+
+PRINT Move to next car
+waitrandom 4000 5000
+up
+waitrandom 4000 5000
+left
+
+
+
+
+
+
+PRINT World Series Gold - Corvette - 13
+
+
+
+PRINT Move to next car
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+
+
+
+NEXT

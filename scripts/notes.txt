@@ -1,0 +1,2 @@
+Accepted connection at psm 17 from ('70:48:F7:D4:8D:0D', 17)
+[15:51:21] joycontrol.server create_hid_server::100 INFO - Accepted connection at psm 19 from ('70:48:F7:D4:8D:0D', 19)

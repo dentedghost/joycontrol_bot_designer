@@ -1,0 +1,143 @@
+C - Elite
+Ancient wonders
+
+times
+11 Y
+36 Y
+55 Y
+108 Y
+115 Y
+5 seconds Wait
+
+PRINT Choose Series C - Elite
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+
+
+PRINT Choose Track One Off
+waitrandom 1000 2000
+ls up,100
+waitrandom 1000 2000
+ls up,100
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+PRINT Choose Track
+waitrandom 1000 2000
+ls up,100
+waitrandom 1000 2000
+ls up,100
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+
+
+PRINT Car Arrinera Hussarya 33
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+down
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+
+PRINT CAR Acura 2017 NSX
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+
+PRINT CAR Mercedes-Benz AMG GT S
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+right
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+
+
+PRINT START CAR
+waitrandom 1000 2000
+a
+waitrandom 1000 2000
+PRINT an Extra to be sure and it doesn't hurt
+a
+waitrandom 1000 2000
+
+PRINT WAIT for Start
+10000
+
+PRINT RACE Car
+FOR 13
+PRINT OUTER LOOP
+FOR 6
+PRINT INNER LOOP
+waitrandom 1000 1250
+Y
+NEXT
+NEXT
+

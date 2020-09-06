@@ -1,0 +1,183 @@
+PRINT car_hunt_scg_003s
+For 200
+
+PRINT Race Acura
+
+FOR 5
+
+
+PRINT CAR 1
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT START CAR
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+PRINT an Extra to be sure and it doesn't hurt
+a
+WAIT 2000
+
+PRINT WAIT for Start
+14000
+
+PRINT Exact RACE Car
+
+PRINT LEG1
+FOR 11
+WAIT 500
+Y
+WAIT 500
+LEFT
+NEXT
+
+
+PRINT LEG2
+FOR 6
+WAIT 500
+Y
+WAIT 500
+RIGHT
+NEXT
+
+PRINT LEG3
+FOR 8
+WAIT 500
+Y
+WAIT 500
+LEFT
+NEXT
+
+PRINT LEG4
+FOR 7
+WAIT 500
+Y
+WAIT 500
+NEXT
+
+
+
+PRINT WAIT for Race to Finish
+30000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+B
+PRINT Race Rewards
+waitrandom 4000 5000
+B
+PRINT Get Rewards
+waitrandom 4000 5000
+B
+PRINT Complete Race
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+
+
+NEXT
+
+PRINT Choose to Race
+waitrandom 2000 3000
+right
+waitrandom 2000 3000
+right
+waitrandom 2000 3000
+right
+
+
+
+PRINT Pause Between Races
+6000
+
+
+FOR 4
+
+
+PRINT CAR Arrinera
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT START CAR
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+PRINT an Extra to be sure and it doesn't hurt
+a
+WAIT 2000
+
+PRINT WAIT for Start
+14000
+
+PRINT Exact RACE Car
+
+PRINT LEG1
+FOR 11
+WAIT 500
+Y
+WAIT 500
+LEFT
+NEXT
+
+
+PRINT LEG2
+FOR 6
+WAIT 500
+Y
+WAIT 500
+RIGHT
+NEXT
+
+PRINT LEG3
+FOR 14
+WAIT 300
+Y
+WAIT 300
+LEFT
+NEXT
+
+PRINT LEG4
+FOR 7
+WAIT 500
+Y
+WAIT 500
+NEXT
+
+
+PRINT WAIT for Race to Finish
+30000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+B
+PRINT Race Rewards
+waitrandom 4000 5000
+B
+PRINT Get Rewards
+waitrandom 4000 5000
+B
+PRINT Complete Race
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+
+NEXT
+
+PRINT Choose to Race
+waitrandom 2000 3000
+left
+waitrandom 2000 3000
+left
+waitrandom 2000 3000
+left
+
+
+
+NEXT
+PRINT Finished Career Mode Class C Elite Ancient Wonders Racing Suite

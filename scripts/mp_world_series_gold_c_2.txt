@@ -1,0 +1,180 @@
+PRINT MP World Series Gold
+For 100
+
+PRINT World Series Gold - Detense - 1
+
+FOR 12
+
+PRINT Choose Car
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT WAIT 4 Start
+15000
+
+PRINT RACE Car
+
+FOR 30
+PRINT INNER LOOP
+waitrandom 2000 2250
+Y
+230
+Y
+NEXT
+
+
+PRINT WAIT 4 Race to Finish
+30000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished World Series Gold - Acura
+
+waitrandom 4000 5000
+up
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+
+
+
+PRINT World Series Gold -  Car Acera - 2
+
+FOR 5
+
+PRINT Choose Car
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT WAIT 4 Start
+15000
+
+PRINT RACE Car
+
+FOR 30
+PRINT INNER LOOP
+waitrandom 2000 2250
+Y
+230
+Y
+NEXT
+
+
+PRINT WAIT 4 Race to Finish
+20000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished World Series Gold - cars 2
+
+waitrandom 4000 5000
+down
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+
+
+NEXT
+PRINT Finished MP World Series Gold - Limit to 4 refill cars

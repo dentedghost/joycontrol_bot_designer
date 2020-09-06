@@ -1,0 +1,119 @@
+
+
+PRINT Finished World Series Gold - Beast 1
+
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+
+
+PRINT Finished World Series Gold - Limit to 4 refill cars 2
+
+waitrandom 4000 5000
+down
+waitrandom 4000 5000
+
+
+PRINT World Series Gold - Limit to 5 refill cars Maserati  - 3
+
+
+PRINT Finished World Series Gold - refill cars 3
+
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+
+
+PRINT World Series Gold - Limit to 4 refill cars Hussarya  - 4
+
+
+PRINT Finished World Series Gold - Limit to 4 refill cars 4
+
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+waitrandom 4000 5000
+up
+waitrandom 4000 5000
+
+
+PRINT World Series Gold - Grand Sport Limit to 4 refill cars 5
+
+PRINT Finished World Series Gold - Limit to 4 refill cars 5
+
+
+waitrandom 4000 5000
+down
+waitrandom 4000 5000
+
+
+PRINT World Series Gold - Aston Limit to 4 refill cars 6
+
+PRINT Finished World Series Gold - Limit to 4 refill cars 6
+
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+
+
+
+PRINT World Series Gold - Apollo Limit to 4 refill cars 7
+
+
+PRINT Finished World Series Gold - Limit to 4 refill cars 7
+
+
+waitrandom 4000 5000
+right
+waitrandom 4000 5000
+
+
+PRINT World Series Gold - Huracan Limit to 4 refill cars 8
+
+PRINT Finished World Series Gold - Limit to 4 refill cars 8
+
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+up
+
+
+
+PRINT Finished MP World Series Gold - Limit to 4 refill cars

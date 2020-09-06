@@ -1,0 +1,146 @@
+PRINT Career Mode Class C Elite Ancient Wonders Racing Suite
+For 200
+
+PRINT Race CAR Mercedes-Benz AMG GT S - 6 times
+
+FOR 6
+
+PRINT Choose Track
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT CAR Mercedes-Benz AMG GT S
+waitrandom 2000 3000
+right
+waitrandom 2000 3000
+right
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT START CAR
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+PRINT an Extra to be sure and it doesn't hurt
+a
+waitrandom 2000 3000
+
+PRINT WAIT for Start
+10000
+
+PRINT RACE Car
+FOR 13
+PRINT OUTER LOOP
+FOR 3
+PRINT INNER LOOP
+waitrandom 2000 2250
+Y
+NEXT
+NEXT
+
+PRINT WAIT for Race to Finish
+10000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished Racing Mercedes-Benz AMG GT S - 6 times
+
+
+PRINT Race CAR BMW M4 GTS - 6 times
+
+FOR 6
+
+PRINT Choose Track
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT CAR BMW M4 GTS - 6 times
+waitrandom 2000 3000
+
+right
+waitrandom 2000 3000
+right
+waitrandom 2000 3000
+down
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT START CAR
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+PRINT an Extra to be sure and it doesn't hurt
+a
+waitrandom 2000 3000
+
+PRINT WAIT for Start
+10000
+
+PRINT RACE Car
+FOR 13
+PRINT OUTER LOOP
+FOR 3
+PRINT INNER LOOP
+waitrandom 2000 2250
+Y
+NEXT
+NEXT
+
+PRINT WAIT for Race to Finish
+10000
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+a
+PRINT Race Rewards
+waitrandom 4000 5000
+a
+PRINT Missions
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+
+NEXT
+
+PRINT Finished Racing BMW M4 GTS - 6 times
+
+
+PRINT Pause Between Races
+FOR 300
+2000
+Y
+1000
+NEXT
+
+
+NEXT
+PRINT Finished Career Mode Class C Elite Ancient Wonders Racing Suite
