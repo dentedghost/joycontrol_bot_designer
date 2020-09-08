@@ -49,11 +49,10 @@ Install awesome projects that enabled Joycontrol Bot Designer:
 * [joycontrol](https://github.com/mart1nro/joycontrol#installation)
 * [joycontrol_rest_api](https://github.com/choss/joycontrol_rest_api#package-requirements)
 
-Install libraries:
+Install libraries, In addition to the joycontrol and joycontrol_rest_api packages:
 
 ```sh
-sudo apt install apache2
-sudo pip3 install flask hid aioconsole crc8
+sudo pip3 install pycurl
 ```
 
 ### Installation
