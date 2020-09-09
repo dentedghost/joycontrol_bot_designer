@@ -171,11 +171,11 @@ NEXT
 
 PRINT Choose to Race
 waitrandom 2000 3000
-left
+PRINT left
 waitrandom 2000 3000
-left
+PRINT left
 waitrandom 2000 3000
-left
+PRINT left
 
 
 
