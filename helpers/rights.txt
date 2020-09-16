@@ -1,0 +1,6 @@
+PRINT Entering Rights
+RIGHT
+WAIT 2000
+RIGHT
+WAIT 2000
+PRINT Exiting Rights
