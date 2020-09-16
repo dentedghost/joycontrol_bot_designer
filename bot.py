@@ -29,10 +29,6 @@ if __name__ == '__main__':
     parser.add_argument('-l', '--log')
     args = parser.parse_args()
 
-    # loop = asyncio.get_event_loop()
-    # loop.run_until_complete(
-    #     _main(args)
-    # )
     asyncio.run(_main(args))
    
 
