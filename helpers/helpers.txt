@@ -1,6 +1,3 @@
-PRINT Entering Rights
-RIGHT
-WAIT 2000
-RIGHT
-WAIT 2000
-PRINT Exiting Rights
+PRINT Entering Helpers
+helper rights.txt
+PRINT Exiting Helper

@@ -1,0 +1,26 @@
+PRINT Move to next car
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+
+waitrandom 4000 5000
+down
