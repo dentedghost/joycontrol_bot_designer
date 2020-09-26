@@ -1,0 +1,54 @@
+PRINT MP World Series Platinum
+For 300
+
+PRINT World Series - McLaren P1 - 1
+
+FOR 4
+HELPER mp_1lap_complete_race.helper
+NEXT
+
+HELPER self_healing_mclaren_p1.helper
+HELPER move_to_pagani.helper
+
+
+PRINT World Series - Pagani - 2
+
+FOR 3
+HELPER mp_1lap_complete_race.helper
+NEXT
+
+HELPER self_healing_pagani.helper
+HELPER move_to_porsche_spyder.helper
+
+
+PRINT World Series - Porsche Spider - 3
+
+FOR 4
+HELPER mp_1lap_complete_race.helper
+NEXT
+
+HELPER self_healing_porsche_spyder.helper
+HELPER move_to_lam_avt_j.helper
+
+
+PRINT World Series - Lamborghini Aventador J - 4
+
+FOR 4
+HELPER mp_1lap_complete_race.helper
+NEXT
+
+HELPER self_healing_lam_avt_j.helper
+HELPER move_to_lam_avt_sv.helper
+
+
+PRINT World Series - Lamborghini Aventador SV Coupe - 5
+
+FOR 4
+HELPER mp_1lap_complete_race.helper
+NEXT
+
+HELPER self_healing_lam_avt_sv.helper
+HELPER move_to_mclaren_p1.helper
+
+
+NEXT

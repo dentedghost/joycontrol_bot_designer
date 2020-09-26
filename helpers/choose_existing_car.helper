@@ -1,0 +1,22 @@
+PRINT Choose Car
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 4000 5000
+up
+waitrandom 4000 5000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 2250
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+
+PRINT WAIT 4 Start
+12000

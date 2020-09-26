@@ -1,0 +1,72 @@
+PRINT Choose Car
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 4000 5000
+up
+waitrandom 4000 5000
+up
+waitrandom 2000 3000
+a
+waitrandom 2000 2250
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+a
+
+
+PRINT WAIT 4 Start
+12000
+
+PRINT RACE Car
+
+FOR 20
+PRINT INNER LOOP
+waitrandom 2000 2250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 10
+PRINT INNER LOOP
+LEFT
+waitrandom 2000 2250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 35
+PRINT INNER LOOP
+waitrandom 2000 2250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+
+PRINT WAIT 4 Race to Finish
+22000
+
+
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+b
+PRINT Race Rewards
+waitrandom 4000 5000
+b
+PRINT Missions
+waitrandom 4000 5000
+b
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+
+PRINT FINISH RACE

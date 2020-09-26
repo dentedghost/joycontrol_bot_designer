@@ -1,0 +1,61 @@
+PRINT SELF HEALING
+
+waitrandom 4000 5000
+up
+
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+
+
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+
+waitrandom 4000 5000
+down
+waitrandom 4000 5000
+down
+
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+
+waitrandom 4000 5000
+left
+waitrandom 4000 5000
+left
+
