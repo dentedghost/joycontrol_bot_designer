@@ -1,0 +1,5 @@
+PRINT Move to Vforce from right
+
+FOR 10
+HELPER move_car_left.helper
+NEXT

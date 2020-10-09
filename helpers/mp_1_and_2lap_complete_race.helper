@@ -1,7 +1,7 @@
 PRINT Choose Car
 waitrandom 2000 3000
 a
-waitrandom 4000 5000
+waitrandom 2000 3000
 a
 waitrandom 4000 5000
 up
@@ -48,6 +48,33 @@ Y
 waitrandom 200 350
 Y
 NEXT
+
+
+FOR 8
+PRINT INNER LOOP
+waitrandom 2000 2250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 7
+PRINT INNER LOOP
+LEFT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 23
+PRINT INNER LOOP
+waitrandom 2000 2250
+Y
+waitrandom 200 350
+Y
+NEXT
+
 
 
 PRINT WAIT 4 Race to Finish

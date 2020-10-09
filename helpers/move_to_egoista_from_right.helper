@@ -1,0 +1,5 @@
+PRINT Move to Egoista from right
+
+FOR 4
+HELPER move_car_left.helper
+NEXT

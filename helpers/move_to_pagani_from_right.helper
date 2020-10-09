@@ -1,0 +1,5 @@
+PRINT Move to Pagani from right
+
+FOR 8
+HELPER move_car_left.helper
+NEXT

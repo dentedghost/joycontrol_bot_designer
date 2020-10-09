@@ -1,0 +1,14 @@
+PRINT Finish Race and Race Results
+waitrandom 5000 6000
+b
+PRINT Race Rewards
+waitrandom 4000 5000
+b
+PRINT Missions
+waitrandom 4000 5000
+b
+waitrandom 4000 5000
+a
+waitrandom 4000 5000
+a
+waitrandom 4000 5000

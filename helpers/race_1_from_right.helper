@@ -1,0 +1,10 @@
+PRINT World Series MP - {CAR}
+
+HELPER move_to_car_from_right.helper HOZ={HOZ} VER={VER}
+
+FOR {RACES}
+HELPER mp_1lap_complete_race.helper
+NEXT
+
+HELPER after_finish_race_try_refill.helper
+HELPER self_healing_car_to_the_right.helper HEAL={HEAL}

@@ -1,0 +1,5 @@
+PRINT SELF HEALING Vforce to the right
+
+FOR 12
+HELPER move_car_right.helper
+NEXT

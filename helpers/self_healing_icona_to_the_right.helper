@@ -1,0 +1,5 @@
+PRINT SELF HEALING Icona to the right
+
+FOR 6
+HELPER move_car_right.helper
+NEXT

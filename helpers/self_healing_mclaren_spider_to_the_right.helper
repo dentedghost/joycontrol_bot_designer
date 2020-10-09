@@ -1,0 +1,5 @@
+PRINT SELF HEALING McLaren Spider to the right
+
+FOR 10
+HELPER move_car_right.helper
+NEXT

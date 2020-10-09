@@ -1,0 +1,9 @@
+PRINT Move to Trion from right
+
+FOR 4
+HELPER move_car_left.helper
+NEXT
+
+FOR 1
+HELPER move_car_down.helper
+NEXT

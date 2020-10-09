@@ -1,0 +1,5 @@
+PRINT SELF HEALING Mclaren P1 to the right
+
+FOR 14
+HELPER move_car_right.helper
+NEXT
