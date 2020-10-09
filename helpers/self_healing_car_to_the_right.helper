@@ -1,0 +1,6 @@
+PRINT SELF HEALING Car to the right
+
+
+FOR {HEAL}
+HELPER move_car_right.helper
+NEXT

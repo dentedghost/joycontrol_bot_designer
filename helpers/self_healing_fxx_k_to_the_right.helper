@@ -1,0 +1,6 @@
+PRINT SELF HEALING FXX K to the right
+
+FOR 7
+HELPER move_car_right.helper
+NEXT
+right

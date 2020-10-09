@@ -1,0 +1,5 @@
+PRINT Move to Senna from right
+
+FOR 2
+HELPER move_car_left.helper
+NEXT

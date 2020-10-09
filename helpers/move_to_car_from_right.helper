@@ -1,0 +1,9 @@
+PRINT Move to Car from right
+
+FOR {HOZ}
+HELPER move_car_left.helper
+NEXT
+
+FOR {VER}
+HELPER move_car_down.helper
+NEXT

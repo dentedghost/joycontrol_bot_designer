@@ -1,0 +1,18 @@
+PRINT Exit 2nd lap race
+waitrandom 300 400
+PLUS
+waitrandom 300 400
+DOWN
+waitrandom 300 400
+DOWN
+waitrandom 300 400
+DOWN
+waitrandom 300 400
+DOWN
+waitrandom 300 400
+DOWN
+waitrandom 300 400
+DOWN
+waitrandom 300 400
+A
+waitrandom 300 400

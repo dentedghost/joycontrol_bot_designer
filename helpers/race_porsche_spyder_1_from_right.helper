@@ -1,0 +1,10 @@
+PRINT World Series MP - Porsche Spyder
+
+HELPER move_to_porsche_spyder_from_right.helper
+
+FOR 4
+HELPER mp_1lap_complete_race.helper
+NEXT
+
+HELPER after_finish_race_try_refill.helper
+HELPER self_healing_porsche_spyder_to_the_right.helper

@@ -1,0 +1,9 @@
+PRINT World Series MP - McLaren P1
+
+HELPER move_to_mclaren_p1_from_right.helper
+
+FOR 4
+HELPER mp_1_exit_if_2lap_complete_race.helper
+NEXT
+
+HELPER self_healing_mclaren_p1_to_the_right.helper

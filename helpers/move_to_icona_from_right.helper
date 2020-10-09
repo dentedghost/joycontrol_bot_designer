@@ -1,0 +1,6 @@
+PRINT Move to Icona from right
+
+FOR 5
+HELPER move_car_left.helper
+NEXT
+

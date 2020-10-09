@@ -1,0 +1,5 @@
+PRINT SELF HEALING Senna to the right
+
+FOR 4
+HELPER move_car_right.helper
+NEXT

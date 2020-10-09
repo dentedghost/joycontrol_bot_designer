@@ -1,0 +1,6 @@
+PRINT SELF HEALING Lykan to the right
+
+FOR 6
+HELPER move_car_right.helper
+NEXT
+right

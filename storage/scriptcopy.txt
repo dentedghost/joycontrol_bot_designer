@@ -1,54 +1,44 @@
-PRINT MP World Series Platinum
+PRINT MP World Series Gold
+
 For 300
 
-PRINT World Series - McLaren P1 - 1
+HELPER race_1_from_right.helper CAR=senna RACES=3 HOZ=3 VER=0 HEAL=4
 
-FOR 4
-HELPER mp_1lap_complete_race.helper
-NEXT
+HELPER race_1_from_right.helper CAR=fxxk RACES=4 HOZ=6 VER=1 HEAL=7
 
-HELPER self_healing_mclaren_p1.helper
-HELPER move_to_pagani.helper
+HELPER race_1_from_right.helper CAR=chiron RACES=3 HOZ=1 VER=1 HEAL=2
 
+HELPER race_1_from_right.helper CAR=mclaren_p1 RACES=4 HOZ=12 VER=1 HEAL=13
 
-PRINT World Series - Pagani - 2
+HELPER race_1_from_right.helper CAR=egoista RACES=3 HOZ=4 VER=0 HEAL=5
 
-FOR 3
-HELPER mp_1lap_complete_race.helper
-NEXT
+HELPER race_1_from_right.helper CAR=icona RACES=4 HOZ=5 VER=0 HEAL=6
 
-HELPER self_healing_pagani.helper
-HELPER move_to_porsche_spyder.helper
+HELPER race_1_from_right.helper CAR=pagani RACES=3 HOZ=8 VER=0 HEAL=9
+
+HELPER race_1_from_right.helper CAR=porsche_spyder RACES=4 HOZ=10 VER=1 HEAL=12
 
 
-PRINT World Series - Porsche Spider - 3
-
-FOR 4
-HELPER mp_1lap_complete_race.helper
-NEXT
-
-HELPER self_healing_porsche_spyder.helper
-HELPER move_to_lam_avt_j.helper
 
 
-PRINT World Series - Lamborghini Aventador J - 4
 
-FOR 4
-HELPER mp_1lap_complete_race.helper
-NEXT
-
-HELPER self_healing_lam_avt_j.helper
-HELPER move_to_lam_avt_sv.helper
+# Paused
 
 
-PRINT World Series - Lamborghini Aventador SV Coupe - 5
 
-FOR 4
-HELPER mp_1lap_complete_race.helper
-NEXT
+# Bull Pen
 
-HELPER self_healing_lam_avt_sv.helper
-HELPER move_to_mclaren_p1.helper
+# HELPER race_1_from_right.helper CAR=mclaren_spider RACES=3 HOZ=9 VER=0 HEAL=10
+
+# HELPER race_1_from_right.helper CAR=vforce RACES=4 HOZ=10 VER=0 HEAL=11
+
+# HELPER race_1_from_right.helper CAR=jesko RACES=3 HOZ=0 VER=0 HEAL=1
+
+# HELPER race_1_from_right.helper CAR=fenyr RACES=3 HOZ=2 VER=0 HEAL=3
+
+# HELPER race_1_from_right.helper CAR=lykan RACES=4 HOZ=5 VER=1 HEAL=6
+
+# HELPER race_1_from_right.helper CAR=trion RACES=3 HOZ=4 VER=1 HEAL=5
 
 
 NEXT

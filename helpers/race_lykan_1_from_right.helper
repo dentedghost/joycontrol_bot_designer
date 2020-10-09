@@ -1,0 +1,10 @@
+PRINT World Series MP - W Motors Lykan Hypersport
+
+HELPER move_to_lykan_from_right.helper
+
+FOR 4
+HELPER mp_1lap_complete_race.helper
+NEXT
+
+HELPER after_finish_race_try_refill.helper
+HELPER self_healing_lykan_to_the_right.helper

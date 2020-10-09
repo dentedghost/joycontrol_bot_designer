@@ -1,0 +1,9 @@
+PRINT Move to Lykan from right
+
+FOR 5
+HELPER move_car_left.helper
+NEXT
+
+FOR 1
+HELPER move_car_down.helper
+NEXT

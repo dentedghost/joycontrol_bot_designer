@@ -1,10 +1,11 @@
-import logging
+from aioconsole import ainput
 import asyncio
+import logging
 import random
-from curl_client import CurlClient
+import re
 import signal
 
-from aioconsole import ainput
+from curl_client import CurlClient
 from joycontrol.controller_state import button_push
 
 logger = logging.getLogger(__name__)
@@ -45,15 +46,40 @@ class CCLI():
         with open('storage/message.txt', 'a') as f:
             f.write(msg + '\n')
 
-    async def get(self, path, file):
+    async def get(self, path, file, **kwargs):
+
+        variable_replacements = ''
+        if len(kwargs):
+            variable_replacements = self.lower_dict_variables(kwargs)
+        #
+        # for k, v in variable_replacements.items():
+        #     print('keyword argument: {} = {}'.format(k, v))
+
         with open(path + file, 'r') as f:
+
             result = list()
             for line in f.readlines():
                 line = line.strip()
+                line = line.lower()
                 if not len(line) or line.startswith('#'):
                     continue
-                result.append(line.lower())
+                if len(variable_replacements):
+                    line = self.multiple_replace(variable_replacements, line)
+                result.append(line)
             return result
+
+    # https://stackoverflow.com/questions/15175142/how-can-i-do-multiple-substitutions-using-regex-in-python
+    @staticmethod
+    def multiple_replace(replacements, text):
+        # Create a regular expression  from the dictionary keys:
+        regex = re.compile("(%s)" % "|".join(map(re.escape, replacements.keys())))
+        # For each match, look-up corresponding value in dictionary:
+        return regex.sub(lambda mo: replacements[mo.string[mo.start():mo.end()]], text)
+
+    @staticmethod
+    def lower_dict_variables(d):
+        new_dict = dict(('{' + k.lower() + '}', v.lower()) for k, v in d.items())
+        return new_dict
 
     async def clean(self, path, file):
         with open(path + file, 'w+') as f:
@@ -240,13 +266,20 @@ class CCLI():
             cmd, *args = user_input[i].split()
 
             if cmd == 'for':
-                for _ in range(int(args[0])):
+                # Allow the ability to skip a FOR loop when set to Zero
+                if int(args[0]) == 0:
                     until, forcmd = await self.forCheck(i, user_input)
-                    for get in forcmd:
-                        commands.append(get)
+                else:
+                    for _ in range(int(args[0])):
+                        until, forcmd = await self.forCheck(i, user_input)
+                        for get in forcmd:
+                            commands.append(get)
             elif cmd == 'helper':
                 print(f'In forCheck: helper {args[0]}')
-                helper_input = await self.get('helpers/', args[0])
+                helper_input = await self.get(
+                    'helpers/',
+                    args[0],
+                    **dict(arg.split('=') for arg in args[1:]))
                 print(f'In forCheck: helper_input {helper_input}')
                 helpercmd = await self.helpersCheck(helper_input)
                 for get in helpercmd:
@@ -271,15 +304,21 @@ class CCLI():
 
             cmd, *args = user_input[i].split()
             if cmd == 'for':
-                for _ in range(int(args[0])):
+                # Allow the ability to skip a FOR loop when set to Zero
+                if int(args[0]) == 0:
                     until, forcmd = await self.forCheck(i, user_input)
-                    for get in forcmd:
-                        commands.append(get)
-
+                else:
+                    for _ in range(int(args[0])):
+                        until, forcmd = await self.forCheck(i, user_input)
+                        for get in forcmd:
+                            commands.append(get)
             #  Maybe add check for helper here?
             # Might just need to insert into user_input
             elif cmd == 'helper':
-                helper_input = await self.get('helpers/', args[0])
+                helper_input = await self.get(
+                    'helpers/',
+                    args[0],
+                    **dict(arg.split('=') for arg in args[1:]))
                 helpercmd = await self.helpersCheck(helper_input)
                 for get in helpercmd:
                     commands.append(get)
@@ -320,16 +359,23 @@ class CCLI():
             cmd, *args = user_input[i].split()
             print(f'cmd {cmd} args {args}')
             if cmd == 'for':
-                for _ in range(int(args[0])):
+                # Allow the ability to skip a FOR loop when set to Zero
+                if int(args[0]) == 0:
                     until, forcmd = await self.forCheck(i, user_input)
-                    for get in forcmd:
-                        commands.append(get)
+                else:
+                    for _ in range(int(args[0])):
+                        until, forcmd = await self.forCheck(i, user_input)
+                        for get in forcmd:
+                            commands.append(get)
 
             #  Maybe add check for helper here?
             # Might just need to insert into user_input
             elif cmd == 'helper':
                 print(f'In runScript: elif cmd helper')
-                helper_input = await self.get('helpers/', args[0])
+                helper_input = await self.get(
+                    'helpers/',
+                    args[0],
+                    **dict(arg.split('=') for arg in args[1:]))
                 print(f'In runScript: helper helper_input {helper_input}')
                 helpercmd = await self.helpersCheck(helper_input)
                 for get in helpercmd:
