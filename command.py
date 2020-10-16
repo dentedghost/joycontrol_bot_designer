@@ -164,6 +164,8 @@ class CCLI():
                     await asyncio.sleep(float(random_wait) / 1000)
                 else:
                     print(f'command waitrandom args need to be int {start_time} {end_time}')
+            elif cmd == '.helper':
+                continue
             else:
                 print(f'In pressButton: command {cmd} not found')
 

@@ -1,0 +1,17 @@
+PRINT Move Car in any direction to heal
+
+FOR {HEALHOZL}
+HELPER move_car_left.helper
+NEXT
+
+FOR {HEALHOZR}
+HELPER move_car_right.helper
+NEXT
+
+FOR {HEALVERD}
+HELPER move_car_down.helper
+NEXT
+
+FOR {HEALVERU}
+HELPER move_car_up.helper
+NEXT
