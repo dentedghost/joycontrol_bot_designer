@@ -5,6 +5,7 @@ import random
 import re
 import signal
 
+
 from curl_client import CurlClient
 from joycontrol.controller_state import button_push
 
@@ -112,7 +113,7 @@ class CCLI():
         print(f'button_push buttons {buttons}')
         for button in buttons:
             # push button
-            print(f'button_push button {button}')
+            # print(f'button_push button {button}')
             endpoint = "controller/button/press/" + button
             curl_request = CurlClient(endpoint)
             curl_request.curl_patch()  # Slight delay between requests
@@ -132,10 +133,10 @@ class CCLI():
 
     async def pressButton(self, *commands):
         for command in commands:
-            print(f'commands {commands}')
+            # print(f'commands {commands}')
             cmd, *args = command.split(None, 1)
 
-            print(f'cmd args {cmd} {args}')
+            # print(f'cmd args {cmd} {args}')
             if cmd in self.available_sticks:
                 dir, sec, *sth = args[0].split(',')
                 await self.cmd_stick(cmd, dir, sec)
@@ -146,14 +147,15 @@ class CCLI():
                 button_count = len(buttons)
                 button_index = random.randint(0, button_count-1)
                 chosen_button = buttons[button_index]
-                print(f'buttons index chosen {buttons} {button_index},{chosen_button}')
+                # print(f'buttons index chosen {buttons} {button_index},{chosen_button}')
                 if chosen_button and not chosen_button.isspace():
                     print(f'buttonrandom button  {chosen_button}')
                     await self.button_push(chosen_button)
             elif cmd.isdecimal():
                 await asyncio.sleep(float(cmd) / 1000)
             elif cmd == 'print':
-                print(args[0])
+                # print(args[0])
+                pass
             elif cmd == 'wait':
                 await asyncio.sleep(float(args[0]) / 1000)
             elif cmd == 'waitrandom':
@@ -277,12 +279,12 @@ class CCLI():
                         for get in forcmd:
                             commands.append(get)
             elif cmd == 'helper':
-                print(f'In forCheck: helper {args[0]}')
+                # print(f'In forCheck: helper {args[0]}')
                 helper_input = await self.get(
                     'helpers/',
                     args[0],
                     **dict(arg.split('=') for arg in args[1:]))
-                print(f'In forCheck: helper_input {helper_input}')
+                # print(f'In forCheck: helper_input {helper_input}')
                 helpercmd = await self.helpersCheck(helper_input)
                 for get in helpercmd:
                     commands.append(get)
@@ -296,7 +298,7 @@ class CCLI():
         # TODO:Need to add a fail if no next
 
     async def helpersCheck(self, user_input):
-        print(f"Entering helpersCheck")
+        # print(f"Entering helpersCheck")
         commands = []
         until = -1
         for i in range(len(user_input)):
@@ -336,15 +338,15 @@ class CCLI():
         pass
 
     async def runScript(self):
-        print(f'In runScript')
+        # print(f'In runScript')
         user_input = await self.get('storage/', 'script.txt')
         if not user_input:
             return
         await self.clean('storage/', 'script.txt')
-        print(f'In runScript2')
+        # print(f'In runScript2')
         commands = []
         until = -1
-        print(f'In runScript3')
+        # print(f'In runScript3')
         for i in range(len(user_input)):
             await self.runCommand()
             if self.script == False:
@@ -359,7 +361,7 @@ class CCLI():
             #     commands.append(get)
 
             cmd, *args = user_input[i].split()
-            print(f'cmd {cmd} args {args}')
+            # print(f'cmd {cmd} args {args}')
             if cmd == 'for':
                 # Allow the ability to skip a FOR loop when set to Zero
                 if int(args[0]) == 0:
@@ -373,12 +375,12 @@ class CCLI():
             #  Maybe add check for helper here?
             # Might just need to insert into user_input
             elif cmd == 'helper':
-                print(f'In runScript: elif cmd helper')
+                # print(f'In runScript: elif cmd helper')
                 helper_input = await self.get(
                     'helpers/',
                     args[0],
                     **dict(arg.split('=') for arg in args[1:]))
-                print(f'In runScript: helper helper_input {helper_input}')
+                # print(f'In runScript: helper helper_input {helper_input}')
                 helpercmd = await self.helpersCheck(helper_input)
                 for get in helpercmd:
                     commands.append(get)
@@ -393,7 +395,7 @@ class CCLI():
             else:
                 print(f'In runScript: commands {cmd} not found')
 
-        print(f'In runScript4')
+        # print(f'In runScript4')
 
         for command in commands:
             await self.runCommand()

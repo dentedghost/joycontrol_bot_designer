@@ -1,17 +1,20 @@
 PRINT Move Car in any direction
 
-FOR {HOZL}
-HELPER move_car_left.helper
+FOR {VERU}
+HELPER move_car_up.helper
 NEXT
 
 FOR {HOZR}
 HELPER move_car_right.helper
 NEXT
 
+FOR {HOZL}
+HELPER move_car_left.helper
+NEXT
+
 FOR {VERD}
 HELPER move_car_down.helper
 NEXT
 
-FOR {VERU}
-HELPER move_car_up.helper
-NEXT
+
+
