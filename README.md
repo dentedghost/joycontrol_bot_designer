@@ -54,6 +54,11 @@ Install libraries, In addition to the joycontrol and joycontrol_rest_api package
 ```sh
 sudo pip3 install pycurl
 ```
+If you have issues installing pycurl try installing this first
+
+```sh
+sudo apt install libcurl4-openssl-dev libssl-dev
+```
 
 ### Installation
  
