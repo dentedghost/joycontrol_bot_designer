@@ -52,7 +52,7 @@ Install awesome projects that enabled Joycontrol Bot Designer:
 Install libraries, In addition to the joycontrol and joycontrol_rest_api packages:
 
 ```sh
-sudo pip3 install pycurl
+sudo pip3 install pycurl flask
 ```
 If you have issues installing pycurl try installing this first
 
