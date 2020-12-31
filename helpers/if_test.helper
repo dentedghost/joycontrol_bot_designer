@@ -1,0 +1,6 @@
+print Hello
+IF 2 == 2
+PRINT Goodbye
+ELSE
+PRINT NOt goodbye
+ENDIF

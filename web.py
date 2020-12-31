@@ -29,7 +29,7 @@ def write(file, msg):
 
 
 def save(file, msg):
-    with open('scripts/'+file, 'w') as f:
+    with open('bots/'+file, 'w') as f:
         f.write(msg)
 
 
@@ -165,7 +165,7 @@ def load():
 
     if request.method == 'POST':
         script_filename = request.form['chosen_script']
-        with current_app.open_resource('scripts/' + script_filename) as f:
+        with current_app.open_resource('bots/' + script_filename) as f:
             script_contents = f.read().decode(encoding='UTF-8')
         write('scriptname.txt', script_filename)
         write('scriptcopy.txt', script_contents)
@@ -224,7 +224,7 @@ def files_scanner(path):
 def choose():
 
     files = []
-    for file in files_scanner("scripts"):
+    for file in files_scanner("bots"):
         print(file)
         files.append(file)
 

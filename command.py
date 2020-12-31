@@ -1,6 +1,10 @@
 from aioconsole import ainput
 import asyncio
+from copy import deepcopy
+import importlib
 import logging
+import operator
+import os
 import random
 import re
 import signal
@@ -46,6 +50,108 @@ class CCLI():
     async def write(self, msg):
         with open('storage/message.txt', 'a') as f:
             f.write(msg + '\n')
+
+
+    async def calculate_if(self, path, equation):
+        print(f'calculate_if {path}, {equation}')
+        count = len(equation)
+        print(f'{count}')
+        # Check for operation and expected
+        if count == 1:
+            actual = equation[0]
+
+            if 'script' in actual:
+                print("Inside calculate_if script for 1")
+                # Execute and return scripts result
+                actual_name = actual.split('.')[0]
+                module = importlib.import_module('.' + actual_name, package='scripts')
+                result = module.script()
+                print(result)
+                return result
+            else:
+                print("Invalid single equation")
+                return False
+        elif count == 3:
+            actual = equation[0]
+            operation = equation[1]
+            expected = equation[2]
+
+            print(actual)
+            print(type(actual))
+
+            if 'script' in actual:
+                print("Inside calculate_if script for 3: 1")
+                # Execute and return scripts result
+                actual_name = actual.split('.')[0]
+                module = importlib.import_module('.' + actual_name, package='scripts')
+                actual_result = module.script()
+                print(actual_result)
+                print(type(actual_result))
+            else:
+                actual_result = actual
+
+            if 'script' in expected:
+                print("Inside calculate_if script for 3:3")
+                # Execute and return scripts result
+                expected_name = expected.split('.')[0]
+                module = importlib.import_module('.' + expected_name, package='scripts')
+                expected_result = module.script()
+                print(expected_result)
+                print(type(expected_result))
+            else:
+                expected_result = expected
+
+            allowed_operators = {
+                '==': operator.eq,
+                '!=': operator.ne,
+                '+': operator.add,
+                '-': operator.sub,
+                '*': operator.mul,
+                '/': operator.truediv,  # use operator.div for Python 2
+                '<': operator.lt,
+                '<=': operator.le,
+                '>': operator.gt,
+                '>=': operator.ge,
+            }
+
+            print(operation)
+            # https://stackoverflow.com/questions/707674/how-to-compare-type-of-an-object-in-python
+            if type(actual_result) == type(expected_result):
+                print(allowed_operators[operation])
+                result = allowed_operators[operation](actual_result, expected_result)
+                print(result)
+                return result
+            else:
+                print("Non Matching Type comparison")
+                return False
+
+        else:
+            print("Invalid comparison")
+            return False
+        # Possibly an error
+
+
+
+
+        # variable_replacements = ''
+        # if len(kwargs):
+        #     variable_replacements = self.lower_dict_variables(kwargs)
+        # #
+        # # for k, v in variable_replacements.items():
+        # #     print('keyword argument: {} = {}'.format(k, v))
+        #
+        # with open(path + file, 'r') as f:
+        #
+        #     result = list()
+        #     for line in f.readlines():
+        #         line = line.strip()
+        #         line = line.lower()
+        #         if not len(line) or line.startswith('#'):
+        #             continue
+        #         if len(variable_replacements):
+        #             line = self.multiple_replace(variable_replacements, line)
+        #         result.append(line)
+        #     return result
 
     async def get(self, path, file, **kwargs):
 
@@ -166,7 +272,9 @@ class CCLI():
                     await asyncio.sleep(float(random_wait) / 1000)
                 else:
                     print(f'command waitrandom args need to be int {start_time} {end_time}')
-            elif cmd == '.helper':
+            elif cmd == 'helper':
+                continue
+            elif cmd == 'if':
                 continue
             else:
                 print(f'In pressButton: command {cmd} not found')
@@ -288,6 +396,18 @@ class CCLI():
                 helpercmd = await self.helpersCheck(helper_input)
                 for get in helpercmd:
                     commands.append(get)
+            elif cmd == 'if':
+                # Process If Statement
+                next_if_result = await self.calculate_if(
+                    'scripts/',
+                    args)
+                # Fix recursion issue
+                next_if_result = deepcopy(next_if_result)
+
+                until, forcmd = await self.ifCheck(i, user_input, next_if_result)
+                print("returned from if check")
+                for get in forcmd:
+                    commands.append(get)
             elif cmd == 'next':
                 return i, commands
             elif self.isCommand(cmd):
@@ -326,6 +446,18 @@ class CCLI():
                 helpercmd = await self.helpersCheck(helper_input)
                 for get in helpercmd:
                     commands.append(get)
+            elif cmd == 'if':
+                # Process If Statement
+                next_if_result = await self.calculate_if(
+                    'scripts/',
+                    args)
+                # Fix recursion issue
+                next_if_result = deepcopy(next_if_result)
+
+                until, forcmd = await self.ifCheck(i, user_input, next_if_result)
+                print("returned from if check")
+                for get in forcmd:
+                    commands.append(get)
             elif self.isCommand(cmd):
                 commands.append(user_input[i])
             
@@ -333,6 +465,82 @@ class CCLI():
                 print(f'In helpersCheck: commands {cmd} not found')
 
         return commands
+    # Issue with variable scope with recursion
+    # https://stackoverflow.com/questions/24572089/trouble-with-variable-scope-in-recursive-function-python/24572213
+    async def ifCheck(self, n, user_input, if_result):
+        print("Inside ifCheck")
+        if_result = deepcopy(if_result)
+        # TODO: Send a splice instead of relooping
+        commands = []
+        until = -1
+        else_found = False
+        length = len(user_input)
+        print(f'Length {length}')
+        for i in range(len(user_input)):
+
+            if i <= n or i <= until:
+                continue
+
+            print(f' i {i}  until {until}')
+
+            print(f'else_found: {else_found}')
+
+            cmd, *args = user_input[i].split()
+
+            if cmd == 'else':
+                else_found = True
+                print("Else Found")
+            elif cmd == 'for':
+                # Allow the ability to skip a FOR loop when set to Zero
+                if int(args[0]) == 0:
+                    until, forcmd = await self.forCheck(i, user_input)
+                else:
+                    for _ in range(int(args[0])):
+                        until, forcmd = await self.forCheck(i, user_input)
+                        for get in forcmd:
+                            commands.append(get)
+            elif cmd == 'helper':
+                # print(f'In forCheck: helper {args[0]}')
+                helper_input = await self.get(
+                    'helpers/',
+                    args[0],
+                    **dict(arg.split('=') for arg in args[1:]))
+                # print(f'In forCheck: helper_input {helper_input}')
+                helpercmd = await self.helpersCheck(helper_input)
+                for get in helpercmd:
+                    commands.append(get)
+            # I think we pause look for for since they can't over lap
+            # elif cmd == 'next':
+            #     return i, commands
+            elif cmd == 'if':
+                # Process If Statement
+                next_if_result = await self.calculate_if(
+                    'scripts/',
+                    args)
+                # Fix Recursion Issue
+                next_if_result = deepcopy(next_if_result)
+
+                until, forcmd = await self.ifCheck(i, user_input, next_if_result)
+                print(f"returned from if check result: {forcmd}")
+                for get in forcmd:
+                    commands.append(get)
+            elif cmd == 'endif':
+                print(f'endif or else: {cmd}')
+                return i, commands
+            elif self.isCommand(cmd):
+                print(f'cmd {cmd} if_result {if_result} else_found {else_found}')
+                if if_result and not else_found:
+                    print("if_result and not else_found:")
+                    commands.append(user_input[i])  # only add if if_result true
+                elif else_found and not if_result:
+                    print('Else_found and not if_result')
+                    commands.append(user_input[i])  # only capture that in else
+                else:
+                    pass
+            else:
+                print(f'In forCheck: command {cmd} not found')
+
+        # TODO:Need to add a fail if no next
 
     def parseCommands(self):
         pass
@@ -361,7 +569,7 @@ class CCLI():
             #     commands.append(get)
 
             cmd, *args = user_input[i].split()
-            # print(f'cmd {cmd} args {args}')
+            print(f'cmd {cmd} args {args}')
             if cmd == 'for':
                 # Allow the ability to skip a FOR loop when set to Zero
                 if int(args[0]) == 0:
@@ -384,6 +592,18 @@ class CCLI():
                 helpercmd = await self.helpersCheck(helper_input)
                 for get in helpercmd:
                     commands.append(get)
+            elif cmd == 'if':
+                # Process If Statement
+                next_if_result = await self.calculate_if(
+                    'scripts/',
+                    args)
+                # Fix recursion issue
+                next_if_result = deepcopy(next_if_result)
+
+                until, forcmd = await self.ifCheck(i, user_input, next_if_result)
+                print("returned from if check")
+                for get in forcmd:
+                    commands.append(get)
             # Note need to isCommand check last
             elif self.isCommand(cmd):
                 commands.append(user_input[i])
@@ -398,6 +618,7 @@ class CCLI():
         # print(f'In runScript4')
 
         for command in commands:
+            print(command)
             await self.runCommand()
             if self.script == False:
                 return
