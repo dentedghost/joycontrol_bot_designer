@@ -1,7 +1,7 @@
-PRINT hm_mountain_poles race
+PRINT mw_whirlwind_curve race opt_conf
 
 
-FOR 84
+FOR 43
 PRINT INNER LOOP
 RIGHT
 waitrandom 1000 1250

@@ -1,0 +1,11 @@
+# Check for Start of the race
+
+PRINT Detect Waiting For Players
+IF detection_waiting_for_players.script
+PRINT Start Race
+ELSE
+PRINT No Race Detected
+ENDIF
+
+
+PRINT Detect Waiting For Players EMD

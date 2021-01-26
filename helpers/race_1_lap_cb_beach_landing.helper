@@ -1,12 +1,6 @@
-FOR 8
-PRINT INNER LOOP
-waitrandom 2000 2250
-Y
-waitrandom 200 350
-Y
-NEXT
+PRINT cb_beach_landing race opt_review
 
-FOR 7
+FOR 12
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250
@@ -15,9 +9,10 @@ waitrandom 200 350
 Y
 NEXT
 
-FOR 23
+FOR 27
 PRINT INNER LOOP
-waitrandom 2000 2250
+RIGHT
+waitrandom 1000 1250
 Y
 waitrandom 200 350
 Y

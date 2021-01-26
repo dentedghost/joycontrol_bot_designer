@@ -1,7 +1,7 @@
-PRINT sf_roller_coaster_ride race
+PRINT sf_tunnel_jam race opt_conf
 
 
-FOR 17
+FOR 26
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250
@@ -10,7 +10,7 @@ waitrandom 200 350
 Y
 NEXT
 
-FOR 58
+FOR 12
 PRINT INNER LOOP
 RIGHT
 waitrandom 1000 1250

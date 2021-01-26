@@ -1,6 +1,16 @@
-PRINT cb_beach_landing race
+PRINT cb_thundering_start race
 
-FOR 29
+
+FOR 10
+PRINT INNER LOOP
+RIGHT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 10
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250
@@ -9,18 +19,9 @@ waitrandom 200 350
 Y
 NEXT
 
-FOR 21
+FOR 10
 PRINT INNER LOOP
-LEFT
-waitrandom 1000 1250
-Y
-waitrandom 200 350
-Y
-NEXT
-
-FOR 29
-PRINT INNER LOOP
-LEFT
+RIGHT
 waitrandom 1000 1250
 Y
 waitrandom 200 350

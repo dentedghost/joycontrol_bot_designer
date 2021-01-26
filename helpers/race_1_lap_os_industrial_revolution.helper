@@ -1,7 +1,7 @@
-PRINT mw_whirlwind_curve race
+PRINT os_industrial_revolution race opt conf
 
 
-FOR 92
+FOR 40
 PRINT INNER LOOP
 RIGHT
 waitrandom 1000 1250

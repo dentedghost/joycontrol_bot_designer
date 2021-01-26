@@ -6,5 +6,5 @@ if len(sys.argv[1]):
 else:
     image_name = 'test.png'
 
-# im1 = pyautogui.screenshot(image_name, region=(3000, 50, 640, 480))
-im2 = pyautogui.screenshot(image_name, region=(3065, 75, 75, 75))
+# im_base = pyautogui.screenshot(image_name, region=(3000, 50, 640, 480))
+next_button = pyautogui.screenshot(image_name, region=(3460, 460, 40, 40))

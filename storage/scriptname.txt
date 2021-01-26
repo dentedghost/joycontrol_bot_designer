@@ -1,1 +1,1 @@
-__if_script_and_helper.bot
+_mp_v6_0_legends_league_1_lap.bot

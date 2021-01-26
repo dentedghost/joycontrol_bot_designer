@@ -1,7 +1,7 @@
-PRINT os_budding_start race
+PRINT os_naniwa_tour race opt
 
 
-FOR 38
+FOR 22
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250
@@ -10,7 +10,7 @@ waitrandom 200 350
 Y
 NEXT
 
-FOR 29
+FOR 18
 PRINT INNER LOOP
 RIGHT
 waitrandom 1000 1250

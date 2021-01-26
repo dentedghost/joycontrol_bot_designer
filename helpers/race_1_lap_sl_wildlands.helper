@@ -1,7 +1,16 @@
-PRINT sl_the_cave race
+PRINT sl_wildlands race
+
+FOR 14
+PRINT INNER LOOP
+LEFT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
 
 
-FOR 75
+FOR 26
 PRINT INNER LOOP
 RIGHT
 waitrandom 1000 1250

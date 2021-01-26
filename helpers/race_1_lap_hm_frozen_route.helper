@@ -1,7 +1,15 @@
-PRINT ci_nile_river race
+PRINT hm_frozen_route race
 
+FOR 10
+PRINT INNER LOOP
 
-FOR 84
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 30
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250

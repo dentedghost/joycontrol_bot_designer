@@ -1,18 +1,9 @@
-PRINT sh_nanjing_stroll race
+PRINT sh_shen_city race opt conf
 
 
-FOR 33
+FOR 30
 PRINT INNER LOOP
 LEFT
-waitrandom 1000 1250
-Y
-waitrandom 200 350
-Y
-NEXT
-
-FOR 15
-PRINT INNER LOOP
-RIGHT
 waitrandom 1000 1250
 Y
 waitrandom 200 350

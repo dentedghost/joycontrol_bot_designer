@@ -1,7 +1,7 @@
-PRINT mw_canyon_launch race
+PRINT os_moat_finale race
 
 
-FOR 92
+FOR 55
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250

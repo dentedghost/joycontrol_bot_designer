@@ -1,7 +1,16 @@
-PRINT ci_ancient_wonders race
+PRINT ci_thousand_minarets race opt_conf (new track)
 
 
-FOR 35
+FOR 4
+PRINT INNER LOOP
+LEFT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 39
 PRINT INNER LOOP
 RIGHT
 waitrandom 1000 1250

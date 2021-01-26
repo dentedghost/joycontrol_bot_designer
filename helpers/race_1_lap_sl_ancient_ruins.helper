@@ -1,7 +1,7 @@
-PRINT sf_rush_minute race
+PRINT sl_ancient_ruins race
 
 
-FOR 75
+FOR 35
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250

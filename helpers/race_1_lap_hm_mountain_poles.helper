@@ -1,9 +1,9 @@
-PRINT hm_frozen_route race
+PRINT hm_mountain_poles race opt_conf
 
 
-FOR 84
+FOR 44
 PRINT INNER LOOP
-LEFT
+RIGHT
 waitrandom 1000 1250
 Y
 waitrandom 200 350

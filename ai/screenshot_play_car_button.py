@@ -7,4 +7,4 @@ else:
     image_name = 'test.png'
 
 # im_base = pyautogui.screenshot(image_name, region=(3000, 50, 640, 480))
-next_button = pyautogui.screenshot(image_name, region=(3220, 460, 40, 40))
+next_button = pyautogui.screenshot(image_name, region=(3493, 460, 40, 40))

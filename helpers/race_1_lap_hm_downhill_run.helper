@@ -1,7 +1,7 @@
-PRINT cb_thundering_start race
+PRINT hm_downhill_run race maybe different path earlier left
 
 
-FOR 25
+FOR 21
 PRINT INNER LOOP
 RIGHT
 waitrandom 1000 1250
@@ -10,7 +10,7 @@ waitrandom 200 350
 Y
 NEXT
 
-FOR 42
+FOR 12
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250

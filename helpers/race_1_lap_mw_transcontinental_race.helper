@@ -1,7 +1,7 @@
-PRINT hm_mountain_poles race
+PRINT mw_transcontinental_race race
 
 
-FOR 84
+FOR 40
 PRINT INNER LOOP
 RIGHT
 waitrandom 1000 1250

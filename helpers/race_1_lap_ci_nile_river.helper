@@ -1,9 +1,9 @@
-PRINT cb_paradise_resort race
+PRINT ci_nile_river race opt_conf
 
 
-FOR 67
+FOR 40
 PRINT INNER LOOP
-
+LEFT
 waitrandom 1000 1250
 Y
 waitrandom 200 350

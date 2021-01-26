@@ -1,7 +1,7 @@
-PRINT os_kita_run race
+PRINT rm_pantheon_split race opt
 
 
-FOR 75
+FOR 40
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250

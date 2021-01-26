@@ -52,7 +52,7 @@ class CCLI():
             f.write(msg + '\n')
 
 
-    async def calculate_if(self, path, equation):
+    def calculate_if(self, path, equation):
         print(f'calculate_if {path}, {equation}')
         count = len(equation)
         print(f'{count}')
@@ -161,6 +161,9 @@ class CCLI():
         #
         # for k, v in variable_replacements.items():
         #     print('keyword argument: {} = {}'.format(k, v))
+        #print(f'Inside get: path {path} file {file} ')
+
+
 
         with open(path + file, 'r') as f:
 
@@ -174,6 +177,63 @@ class CCLI():
                     line = self.multiple_replace(variable_replacements, line)
                 result.append(line)
             return result
+
+
+    async def replace_and_run(self, path, file, **kwargs):
+
+        variable_replacements = ''
+        if len(kwargs):
+            variable_replacements = self.lower_dict_variables(kwargs)
+        #
+        # print(f'vr: {variable_replacements}')
+        for key, value in variable_replacements.items():
+            print('keyword argument: {} = {}'.format(key, value))
+            if 'script' in value:
+                # print("Inside replace_and_run script detected")
+                # Execute and return scripts result
+                script_name = value.split('.')[0]
+                # print(f'script name {script_name}')
+                module = importlib.import_module('.' + script_name, package='scripts')
+                # print(f'module {module}')
+                result = module.script()
+                print(f'result {result}')
+
+                variable_replacements[key] = result
+
+        print(f'vr: {variable_replacements}')
+        print(f'vr: {path} {file}')
+
+        try:
+            f = open(path + file, 'r')
+            result = list()
+            for line in f.readlines():
+                line = line.strip()
+                line = line.lower()
+
+                if not len(line) or line.startswith('#'):
+                    continue
+                if len(variable_replacements):
+                    line = self.multiple_replace(variable_replacements, line)
+                # print(f'line {line}')
+                result.append(line)
+            return result
+        except (IOError, ValueError, EOFError) as e:
+            print(e)
+
+            # with open(path + file, 'r') as f:
+            #     print("Open File")
+            #
+            #     result = list()
+            #     for line in f.readlines():
+            #         line = line.strip()
+            #         line = line.lower()
+            #         if not len(line) or line.startswith('#'):
+            #             continue
+            #         if len(variable_replacements):
+            #             line = self.multiple_replace(variable_replacements, line)
+            #         result.append(line)
+            #     return result
+
 
     # https://stackoverflow.com/questions/15175142/how-can-i-do-multiple-substitutions-using-regex-in-python
     @staticmethod
@@ -272,9 +332,8 @@ class CCLI():
                     await asyncio.sleep(float(random_wait) / 1000)
                 else:
                     print(f'command waitrandom args need to be int {start_time} {end_time}')
-            elif cmd == 'helper':
-                continue
-            elif cmd == 'if':
+
+            elif cmd in ['helper', 'helperscript', 'if', 'else', 'endif']:
                 continue
             else:
                 print(f'In pressButton: command {cmd} not found')
@@ -396,19 +455,8 @@ class CCLI():
                 helpercmd = await self.helpersCheck(helper_input)
                 for get in helpercmd:
                     commands.append(get)
-            elif cmd == 'if':
-                # Process If Statement
-                next_if_result = await self.calculate_if(
-                    'scripts/',
-                    args)
-                # Fix recursion issue
-                next_if_result = deepcopy(next_if_result)
-
-                until, forcmd = await self.ifCheck(i, user_input, next_if_result)
-                print("returned from if check")
-                for get in forcmd:
-                    commands.append(get)
             elif cmd == 'next':
+                # print(f'Commands {commands}')
                 return i, commands
             elif self.isCommand(cmd):
                 commands.append(user_input[i])
@@ -446,18 +494,6 @@ class CCLI():
                 helpercmd = await self.helpersCheck(helper_input)
                 for get in helpercmd:
                     commands.append(get)
-            elif cmd == 'if':
-                # Process If Statement
-                next_if_result = await self.calculate_if(
-                    'scripts/',
-                    args)
-                # Fix recursion issue
-                next_if_result = deepcopy(next_if_result)
-
-                until, forcmd = await self.ifCheck(i, user_input, next_if_result)
-                print("returned from if check")
-                for get in forcmd:
-                    commands.append(get)
             elif self.isCommand(cmd):
                 commands.append(user_input[i])
             
@@ -490,25 +526,25 @@ class CCLI():
             if cmd == 'else':
                 else_found = True
                 print("Else Found")
-            elif cmd == 'for':
-                # Allow the ability to skip a FOR loop when set to Zero
-                if int(args[0]) == 0:
-                    until, forcmd = await self.forCheck(i, user_input)
-                else:
-                    for _ in range(int(args[0])):
-                        until, forcmd = await self.forCheck(i, user_input)
-                        for get in forcmd:
-                            commands.append(get)
-            elif cmd == 'helper':
-                # print(f'In forCheck: helper {args[0]}')
-                helper_input = await self.get(
-                    'helpers/',
-                    args[0],
-                    **dict(arg.split('=') for arg in args[1:]))
-                # print(f'In forCheck: helper_input {helper_input}')
-                helpercmd = await self.helpersCheck(helper_input)
-                for get in helpercmd:
-                    commands.append(get)
+            # elif cmd == 'for':
+            #     # Allow the ability to skip a FOR loop when set to Zero
+            #     if int(args[0]) == 0:
+            #         until, forcmd = await self.forCheck(i, user_input)
+            #     else:
+            #         for _ in range(int(args[0])):
+            #             until, forcmd = await self.forCheck(i, user_input)
+            #             for get in forcmd:
+            #                 commands.append(get)
+            # elif cmd == 'helper':
+            #     # print(f'In forCheck: helper {args[0]}')
+            #     helper_input = await self.get(
+            #         'helpers/',
+            #         args[0],
+            #         **dict(arg.split('=') for arg in args[1:]))
+            #     # print(f'In forCheck: helper_input {helper_input}')
+            #     helpercmd = await self.helpersCheck(helper_input)
+            #     for get in helpercmd:
+            #         commands.append(get)
             # I think we pause look for for since they can't over lap
             # elif cmd == 'next':
             #     return i, commands
@@ -592,18 +628,6 @@ class CCLI():
                 helpercmd = await self.helpersCheck(helper_input)
                 for get in helpercmd:
                     commands.append(get)
-            elif cmd == 'if':
-                # Process If Statement
-                next_if_result = await self.calculate_if(
-                    'scripts/',
-                    args)
-                # Fix recursion issue
-                next_if_result = deepcopy(next_if_result)
-
-                until, forcmd = await self.ifCheck(i, user_input, next_if_result)
-                print("returned from if check")
-                for get in forcmd:
-                    commands.append(get)
             # Note need to isCommand check last
             elif self.isCommand(cmd):
                 commands.append(user_input[i])
@@ -616,14 +640,63 @@ class CCLI():
                 print(f'In runScript: commands {cmd} not found')
 
         # print(f'In runScript4')
+        # print(f'Commands loop  {commands}')
 
-        for command in commands:
-            print(command)
+        if_stack = []
+        execute_cmd = True
+        # Credit: https://stackoverflow.com/questions/3752618/python-adding-element-to-list-while-iterating
+        index = 0
+        while index < len(commands):
+            command = commands[index]
+            # print(command)
             await self.runCommand()
             if self.script == False:
                 return
 
-            await self.pressButton(command)
+            cmd, *args = command.split()
+            # print(f'command {cmd}: {command}')
+            if cmd == 'if':
+                # Process If Statement
+                next_if_result = self.calculate_if(
+                    'scripts/',
+                    args)
+                
+                if_stack.append(next_if_result)
+
+                if not next_if_result:
+                    execute_cmd = False
+            elif cmd == 'else':
+                if execute_cmd:
+                    execute_cmd = False
+                else:
+                    execute_cmd = True
+
+            elif cmd == 'endif':
+                if len(if_stack) > 0:
+                    if_stack.pop()
+                if len(if_stack) == 0:
+                    execute_cmd = True
+                else:
+                    execute_cmd = if_stack[-1]
+            elif cmd == 'helperscript':
+
+                helper_input = await self.replace_and_run(
+                    'helpers/',
+                    args[0],
+                    **dict(arg.split('=') for arg in args[1:]))
+                # print(f'helper_input {helper_input}')
+                helpercmd = await self.helpersCheck(helper_input)
+                # print(f'pre-commands {commands} index {index}')
+                if len(helpercmd) > 0:
+                    commands[index+1:index+1] = helpercmd
+                # print(f'commands {commands}')
+            else:
+                if execute_cmd:
+                    # print(f'execute {command}')
+                    await self.pressButton(command)
+
+            index += 1
+            # print(f'next_cmd {commands[index]}')
 
         self.script = False
 

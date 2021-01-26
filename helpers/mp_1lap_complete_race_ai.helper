@@ -1,72 +1,62 @@
-PRINT Choose Car
-waitrandom 2000 3000
+PRINT SELECT Car
+waitrandom 4000 4250
 a
-waitrandom 4000 5000
-a
-waitrandom 4000 5000
-up
-waitrandom 4000 5000
-up
-waitrandom 2000 3000
-a
-waitrandom 2000 2250
-a
-waitrandom 2000 3000
-a
-waitrandom 2000 3000
-a
-waitrandom 2000 3000
-a
+waitrandom 3000 3250
 
 
-PRINT WAIT 4 Start
-12000
+# PRINT Detect Play button
+IF detection_play_car_button.script
+PRINT Detected Play Car Button
+a
+ELSE
+a
+ENDIF
 
-PRINT RACE Car
+PRINT Next
+HELPERSCRIPT mp_1lap_optimized_track_ai.helper TRACK=detection_track.script
 
-FOR 8
-PRINT INNER LOOP
-waitrandom 2000 2250
-Y
-waitrandom 200 350
-Y
-NEXT
 
-FOR 7
-PRINT INNER LOOP
-LEFT
+
+IF detection_next_button.script
+PRINT Detected Play Car Button
+b
 waitrandom 1000 1250
-Y
-waitrandom 200 350
-Y
-NEXT
+ELSE
+b
+waitrandom 1000 1250
+ENDIF
 
-FOR 23
-PRINT INNER LOOP
+IF detection_next_button.script
+PRINT Detected Play Car Button
+b
+waitrandom 1000 1250
+ELSE
+b
+waitrandom 1000 1250
+ENDIF
+
+IF detection_claim_button.script
+waitrandom 4000 4250
+a
+waitrandom 4000 4250
+a
+waitrandom 4000 4250
+up
+waitrandom 4000 4250
+up
+waitrandom 4000 4250
+a
 waitrandom 2000 2250
-Y
-waitrandom 200 350
-Y
-NEXT
+ENDIF
 
 
-PRINT WAIT 4 Race to Finish
-22000
-
-
-PRINT Finish Race and Race Results
-waitrandom 5000 6000
-b
-PRINT Race Rewards
-waitrandom 4000 5000
-b
-PRINT Missions
-waitrandom 4000 5000
-b
-waitrandom 4000 5000
+IF detection_play_center_button.script
+PRINT Detected Play Center Button
 a
-waitrandom 4000 5000
+waitrandom 1000 1250
+ELSE
 a
-waitrandom 4000 5000
+waitrandom 1000 1250
+ENDIF
 
-PRINT FINISH RACE
+PRINT END OF AI script

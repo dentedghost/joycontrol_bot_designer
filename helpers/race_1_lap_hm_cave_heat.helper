@@ -1,7 +1,7 @@
-PRINT ci_nile_river race
+PRINT hm_cave_heat race opt_conf
 
 
-FOR 84
+FOR 40
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250

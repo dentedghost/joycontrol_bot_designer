@@ -1,7 +1,7 @@
-PRINT rm_capital_of_the_world race
+PRINT sf_street_of_san_francisco race opt
 
 
-FOR 84
+FOR 40
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250

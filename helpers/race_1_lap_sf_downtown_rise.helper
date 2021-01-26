@@ -1,7 +1,7 @@
-PRINT os_kita_run race
+PRINT sf_downtown_rise race opt_conf
 
 
-FOR 75
+FOR 38
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250

@@ -1,8 +1,26 @@
-PRINT os_industrial_revolution race
+PRINT rm_saint_peter_kickoff race
 
-
-FOR 88
+FOR 5
 PRINT INNER LOOP
+RIGHT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+
+FOR 25
+PRINT INNER LOOP
+LEFT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+
+FOR 15
 RIGHT
 waitrandom 1000 1250
 Y

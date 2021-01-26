@@ -1,7 +1,7 @@
-PRINT cb_thundering_start race
+PRINT cb_paradise_resort race
 
 
-FOR 25
+FOR 12
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250
@@ -10,9 +10,9 @@ waitrandom 200 350
 Y
 NEXT
 
-FOR 42
+FOR 30
 PRINT INNER LOOP
-LEFT
+
 waitrandom 1000 1250
 Y
 waitrandom 200 350
