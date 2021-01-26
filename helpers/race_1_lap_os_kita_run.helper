@@ -1,0 +1,11 @@
+PRINT hm_cave_heat race
+
+
+FOR 75
+PRINT INNER LOOP
+LEFT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT

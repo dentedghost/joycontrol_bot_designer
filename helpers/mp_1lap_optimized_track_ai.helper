@@ -1,0 +1,14 @@
+PRINT SELECT Car
+waitrandom 2000 2250
+a
+waitrandom 2000 2250
+
+PRINT Detect Play button
+IF detection_play_car_button.script
+a
+ELSE
+PRINT No Detection detection_play_car_button.script
+ENDIF
+
+PRINT Next
+HELPERSCRIPT
