@@ -1,0 +1,20 @@
+PRINT hm_downhill_run race maybe different path earlier left
+
+
+FOR 21
+PRINT INNER LOOP
+RIGHT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 12
+PRINT INNER LOOP
+LEFT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT

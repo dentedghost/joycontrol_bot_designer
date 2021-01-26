@@ -1,0 +1,87 @@
+
+PRINT {HOZL}
+PRINT {HOZR}
+PRINT {VERU}
+PRINT {VERD}
+PRINT {ANIMAL}
+
+PRINT END Command
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.helper HEALHOZL={HEALHOZL} HEALHOZR={HEALHOZR} HEALVERU={HEALVERU} HEALVERD={HEALVERD}

@@ -1,6 +1,10 @@
 from aioconsole import ainput
 import asyncio
+from copy import deepcopy
+import importlib
 import logging
+import operator
+import os
 import random
 import re
 import signal
@@ -47,6 +51,108 @@ class CCLI():
         with open('storage/message.txt', 'a') as f:
             f.write(msg + '\n')
 
+
+    def calculate_if(self, path, equation):
+        print(f'calculate_if {path}, {equation}')
+        count = len(equation)
+        print(f'{count}')
+        # Check for operation and expected
+        if count == 1:
+            actual = equation[0]
+
+            if 'script' in actual:
+                print("Inside calculate_if script for 1")
+                # Execute and return scripts result
+                actual_name = actual.split('.')[0]
+                module = importlib.import_module('.' + actual_name, package='scripts')
+                result = module.script()
+                print(result)
+                return result
+            else:
+                print("Invalid single equation")
+                return False
+        elif count == 3:
+            actual = equation[0]
+            operation = equation[1]
+            expected = equation[2]
+
+            print(actual)
+            print(type(actual))
+
+            if 'script' in actual:
+                print("Inside calculate_if script for 3: 1")
+                # Execute and return scripts result
+                actual_name = actual.split('.')[0]
+                module = importlib.import_module('.' + actual_name, package='scripts')
+                actual_result = module.script()
+                print(actual_result)
+                print(type(actual_result))
+            else:
+                actual_result = actual
+
+            if 'script' in expected:
+                print("Inside calculate_if script for 3:3")
+                # Execute and return scripts result
+                expected_name = expected.split('.')[0]
+                module = importlib.import_module('.' + expected_name, package='scripts')
+                expected_result = module.script()
+                print(expected_result)
+                print(type(expected_result))
+            else:
+                expected_result = expected
+
+            allowed_operators = {
+                '==': operator.eq,
+                '!=': operator.ne,
+                '+': operator.add,
+                '-': operator.sub,
+                '*': operator.mul,
+                '/': operator.truediv,  # use operator.div for Python 2
+                '<': operator.lt,
+                '<=': operator.le,
+                '>': operator.gt,
+                '>=': operator.ge,
+            }
+
+            print(operation)
+            # https://stackoverflow.com/questions/707674/how-to-compare-type-of-an-object-in-python
+            if type(actual_result) == type(expected_result):
+                print(allowed_operators[operation])
+                result = allowed_operators[operation](actual_result, expected_result)
+                print(result)
+                return result
+            else:
+                print("Non Matching Type comparison")
+                return False
+
+        else:
+            print("Invalid comparison")
+            return False
+        # Possibly an error
+
+
+
+
+        # variable_replacements = ''
+        # if len(kwargs):
+        #     variable_replacements = self.lower_dict_variables(kwargs)
+        # #
+        # # for k, v in variable_replacements.items():
+        # #     print('keyword argument: {} = {}'.format(k, v))
+        #
+        # with open(path + file, 'r') as f:
+        #
+        #     result = list()
+        #     for line in f.readlines():
+        #         line = line.strip()
+        #         line = line.lower()
+        #         if not len(line) or line.startswith('#'):
+        #             continue
+        #         if len(variable_replacements):
+        #             line = self.multiple_replace(variable_replacements, line)
+        #         result.append(line)
+        #     return result
+
     async def get(self, path, file, **kwargs):
 
         variable_replacements = ''
@@ -55,6 +161,9 @@ class CCLI():
         #
         # for k, v in variable_replacements.items():
         #     print('keyword argument: {} = {}'.format(k, v))
+        #print(f'Inside get: path {path} file {file} ')
+
+
 
         with open(path + file, 'r') as f:
 
@@ -68,6 +177,63 @@ class CCLI():
                     line = self.multiple_replace(variable_replacements, line)
                 result.append(line)
             return result
+
+
+    async def replace_and_run(self, path, file, **kwargs):
+
+        variable_replacements = ''
+        if len(kwargs):
+            variable_replacements = self.lower_dict_variables(kwargs)
+        #
+        # print(f'vr: {variable_replacements}')
+        for key, value in variable_replacements.items():
+            print('keyword argument: {} = {}'.format(key, value))
+            if 'script' in value:
+                # print("Inside replace_and_run script detected")
+                # Execute and return scripts result
+                script_name = value.split('.')[0]
+                # print(f'script name {script_name}')
+                module = importlib.import_module('.' + script_name, package='scripts')
+                # print(f'module {module}')
+                result = module.script()
+                print(f'result {result}')
+
+                variable_replacements[key] = result
+
+        print(f'vr: {variable_replacements}')
+        print(f'vr: {path} {file}')
+
+        try:
+            f = open(path + file, 'r')
+            result = list()
+            for line in f.readlines():
+                line = line.strip()
+                line = line.lower()
+
+                if not len(line) or line.startswith('#'):
+                    continue
+                if len(variable_replacements):
+                    line = self.multiple_replace(variable_replacements, line)
+                # print(f'line {line}')
+                result.append(line)
+            return result
+        except (IOError, ValueError, EOFError) as e:
+            print(e)
+
+            # with open(path + file, 'r') as f:
+            #     print("Open File")
+            #
+            #     result = list()
+            #     for line in f.readlines():
+            #         line = line.strip()
+            #         line = line.lower()
+            #         if not len(line) or line.startswith('#'):
+            #             continue
+            #         if len(variable_replacements):
+            #             line = self.multiple_replace(variable_replacements, line)
+            #         result.append(line)
+            #     return result
+
 
     # https://stackoverflow.com/questions/15175142/how-can-i-do-multiple-substitutions-using-regex-in-python
     @staticmethod
@@ -166,7 +332,8 @@ class CCLI():
                     await asyncio.sleep(float(random_wait) / 1000)
                 else:
                     print(f'command waitrandom args need to be int {start_time} {end_time}')
-            elif cmd == '.helper':
+
+            elif cmd in ['helper', 'helperscript', 'if', 'else', 'endif']:
                 continue
             else:
                 print(f'In pressButton: command {cmd} not found')
@@ -289,6 +456,7 @@ class CCLI():
                 for get in helpercmd:
                     commands.append(get)
             elif cmd == 'next':
+                # print(f'Commands {commands}')
                 return i, commands
             elif self.isCommand(cmd):
                 commands.append(user_input[i])
@@ -333,6 +501,82 @@ class CCLI():
                 print(f'In helpersCheck: commands {cmd} not found')
 
         return commands
+    # Issue with variable scope with recursion
+    # https://stackoverflow.com/questions/24572089/trouble-with-variable-scope-in-recursive-function-python/24572213
+    async def ifCheck(self, n, user_input, if_result):
+        print("Inside ifCheck")
+        if_result = deepcopy(if_result)
+        # TODO: Send a splice instead of relooping
+        commands = []
+        until = -1
+        else_found = False
+        length = len(user_input)
+        print(f'Length {length}')
+        for i in range(len(user_input)):
+
+            if i <= n or i <= until:
+                continue
+
+            print(f' i {i}  until {until}')
+
+            print(f'else_found: {else_found}')
+
+            cmd, *args = user_input[i].split()
+
+            if cmd == 'else':
+                else_found = True
+                print("Else Found")
+            # elif cmd == 'for':
+            #     # Allow the ability to skip a FOR loop when set to Zero
+            #     if int(args[0]) == 0:
+            #         until, forcmd = await self.forCheck(i, user_input)
+            #     else:
+            #         for _ in range(int(args[0])):
+            #             until, forcmd = await self.forCheck(i, user_input)
+            #             for get in forcmd:
+            #                 commands.append(get)
+            # elif cmd == 'helper':
+            #     # print(f'In forCheck: helper {args[0]}')
+            #     helper_input = await self.get(
+            #         'helpers/',
+            #         args[0],
+            #         **dict(arg.split('=') for arg in args[1:]))
+            #     # print(f'In forCheck: helper_input {helper_input}')
+            #     helpercmd = await self.helpersCheck(helper_input)
+            #     for get in helpercmd:
+            #         commands.append(get)
+            # I think we pause look for for since they can't over lap
+            # elif cmd == 'next':
+            #     return i, commands
+            elif cmd == 'if':
+                # Process If Statement
+                next_if_result = await self.calculate_if(
+                    'scripts/',
+                    args)
+                # Fix Recursion Issue
+                next_if_result = deepcopy(next_if_result)
+
+                until, forcmd = await self.ifCheck(i, user_input, next_if_result)
+                print(f"returned from if check result: {forcmd}")
+                for get in forcmd:
+                    commands.append(get)
+            elif cmd == 'endif':
+                print(f'endif or else: {cmd}')
+                return i, commands
+            elif self.isCommand(cmd):
+                print(f'cmd {cmd} if_result {if_result} else_found {else_found}')
+                if if_result and not else_found:
+                    print("if_result and not else_found:")
+                    commands.append(user_input[i])  # only add if if_result true
+                elif else_found and not if_result:
+                    print('Else_found and not if_result')
+                    commands.append(user_input[i])  # only capture that in else
+                else:
+                    pass
+            else:
+                print(f'In forCheck: command {cmd} not found')
+
+        # TODO:Need to add a fail if no next
 
     def parseCommands(self):
         pass
@@ -361,7 +605,7 @@ class CCLI():
             #     commands.append(get)
 
             cmd, *args = user_input[i].split()
-            # print(f'cmd {cmd} args {args}')
+            print(f'cmd {cmd} args {args}')
             if cmd == 'for':
                 # Allow the ability to skip a FOR loop when set to Zero
                 if int(args[0]) == 0:
@@ -396,13 +640,63 @@ class CCLI():
                 print(f'In runScript: commands {cmd} not found')
 
         # print(f'In runScript4')
+        # print(f'Commands loop  {commands}')
 
-        for command in commands:
+        if_stack = []
+        execute_cmd = True
+        # Credit: https://stackoverflow.com/questions/3752618/python-adding-element-to-list-while-iterating
+        index = 0
+        while index < len(commands):
+            command = commands[index]
+            # print(command)
             await self.runCommand()
             if self.script == False:
                 return
 
-            await self.pressButton(command)
+            cmd, *args = command.split()
+            # print(f'command {cmd}: {command}')
+            if cmd == 'if':
+                # Process If Statement
+                next_if_result = self.calculate_if(
+                    'scripts/',
+                    args)
+                
+                if_stack.append(next_if_result)
+
+                if not next_if_result:
+                    execute_cmd = False
+            elif cmd == 'else':
+                if execute_cmd:
+                    execute_cmd = False
+                else:
+                    execute_cmd = True
+
+            elif cmd == 'endif':
+                if len(if_stack) > 0:
+                    if_stack.pop()
+                if len(if_stack) == 0:
+                    execute_cmd = True
+                else:
+                    execute_cmd = if_stack[-1]
+            elif cmd == 'helperscript':
+
+                helper_input = await self.replace_and_run(
+                    'helpers/',
+                    args[0],
+                    **dict(arg.split('=') for arg in args[1:]))
+                # print(f'helper_input {helper_input}')
+                helpercmd = await self.helpersCheck(helper_input)
+                # print(f'pre-commands {commands} index {index}')
+                if len(helpercmd) > 0:
+                    commands[index+1:index+1] = helpercmd
+                # print(f'commands {commands}')
+            else:
+                if execute_cmd:
+                    # print(f'execute {command}')
+                    await self.pressButton(command)
+
+            index += 1
+            # print(f'next_cmd {commands[index]}')
 
         self.script = False
 

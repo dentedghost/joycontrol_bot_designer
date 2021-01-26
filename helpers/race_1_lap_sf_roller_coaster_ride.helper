@@ -1,0 +1,38 @@
+PRINT sf_roller_coaster_ride race
+
+
+FOR 6
+PRINT INNER LOOP
+LEFT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 8
+PRINT INNER LOOP
+RIGHT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 7
+PRINT INNER LOOP
+LEFT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 16
+PRINT INNER LOOP
+
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT

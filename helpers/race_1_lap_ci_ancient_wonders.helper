@@ -1,0 +1,11 @@
+PRINT ci_ancient_wonders race
+
+
+FOR 35
+PRINT INNER LOOP
+RIGHT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT

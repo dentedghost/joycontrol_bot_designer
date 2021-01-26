@@ -1,0 +1,19 @@
+PRINT mw_gold_rush race need to check
+
+
+FOR 18
+PRINT INNER LOOP
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 15
+PRINT INNER LOOP
+LEFT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT

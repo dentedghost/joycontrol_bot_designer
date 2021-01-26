@@ -1,0 +1,62 @@
+PRINT SELECT Car
+waitrandom 4000 4250
+a
+waitrandom 3000 3250
+
+
+# PRINT Detect Play button
+IF detection_play_car_button.script
+PRINT Detected Play Car Button
+a
+ELSE
+a
+ENDIF
+
+PRINT Next
+HELPERSCRIPT mp_1lap_optimized_track_ai.helper TRACK=detection_track.script
+
+
+
+IF detection_next_button.script
+PRINT Detected Play Car Button
+b
+waitrandom 1000 1250
+ELSE
+b
+waitrandom 1000 1250
+ENDIF
+
+IF detection_next_button.script
+PRINT Detected Play Car Button
+b
+waitrandom 1000 1250
+ELSE
+b
+waitrandom 1000 1250
+ENDIF
+
+IF detection_claim_button.script
+waitrandom 4000 4250
+a
+waitrandom 4000 4250
+a
+waitrandom 4000 4250
+up
+waitrandom 4000 4250
+up
+waitrandom 4000 4250
+a
+waitrandom 2000 2250
+ENDIF
+
+
+IF detection_play_center_button.script
+PRINT Detected Play Center Button
+a
+waitrandom 1000 1250
+ELSE
+a
+waitrandom 1000 1250
+ENDIF
+
+PRINT END OF AI script

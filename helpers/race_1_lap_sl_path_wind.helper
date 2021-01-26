@@ -1,0 +1,19 @@
+PRINT sl_path_wind race opt
+
+
+FOR 10
+PRINT INNER LOOP
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 25
+PRINT INNER LOOP
+RIGHT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT

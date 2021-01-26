@@ -1,0 +1,20 @@
+PRINT cb_pier_pressure race needs debugging
+
+
+FOR 12
+PRINT INNER LOOP
+LEFT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 30
+PRINT INNER LOOP
+
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT

@@ -1,0 +1,22 @@
+PRINT sl_the_cave race
+
+
+FOR 20
+PRINT INNER LOOP
+LEFT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+
+FOR 10
+PRINT INNER LOOP
+RIGHT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+

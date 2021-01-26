@@ -1,0 +1,21 @@
+PRINT sf_rush_minute race opt
+
+
+FOR 28
+PRINT INNER LOOP
+LEFT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+FOR 10
+PRINT INNER LOOP
+
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
