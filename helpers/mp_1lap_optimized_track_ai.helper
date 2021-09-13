@@ -11,6 +11,30 @@ PRINT cb_beach_landing
 HELPER race_1_lap_cb_beach_landing.helper
 ENDIF
 
+
+IF {TRACK} == cb_hell_vale
+PRINT cb_hell_vale
+HELPER race_1_lap_cb_hell_vale.helper
+ENDIF
+
+IF {TRACK} == cb_hotel_road
+PRINT cb_hotel_road
+HELPER race_1_lap_cb_hotel_road.helper
+ENDIF
+
+
+
+
+IF {TRACK} == cb_islet_race
+PRINT cb_islet_race
+HELPER race_1_lap_cb_islet_race.helper
+ENDIF
+
+IF {TRACK} == cb_resort_dash
+PRINT cb_resort_dash
+HELPER race_1_lap_cb_resort_dash.helper
+ENDIF
+
 IF {TRACK} == cb_thundering_start
 PRINT cb_thundering_start
 HELPER race_1_lap_cb_thundering_start.helper
@@ -26,14 +50,39 @@ PRINT cb_pier_pressure
 HELPER race_1_lap_cb_pier_pressure.helper
 ENDIF
 
+
+
+IF {TRACK} == ci_a_kings_revival
+PRINT ci_a_kings_revival
+HELPER race_1_lap_ci_a_kings_revival.helper
+ENDIF
+
 IF {TRACK} == ci_ancient_wonders
 PRINT ci_ancient_wonders
 HELPER race_1_lap_ci_ancient_wonders.helper
 ENDIF
 
+
+IF {TRACK} == ci_cairo_tower_finish
+PRINT ci_cairo_tower_finish
+HELPER race_1_lap_ci_cairo_tower_finish.helper
+ENDIF
+
+IF {TRACK} == ci_gezira_island
+PRINT ci_gezira_island
+HELPER race_1_lap_ci_gezira_island.helper
+ENDIF
+
 IF {TRACK} == ci_nile_river
 PRINT ci_nile_river
 HELPER race_1_lap_ci_nile_river.helper
+ENDIF
+
+
+
+IF {TRACK} == ci_subterranean_dash
+PRINT ci_subterranean_dash
+HELPER race_1_lap_ci_subterranean_dash.helper
 ENDIF
 
 IF {TRACK} == ci_thousand_minarets
@@ -51,9 +100,27 @@ PRINT hm_downhill_run
 HELPER race_1_lap_hm_downhill_run.helper
 ENDIF
 
+
+IF {TRACK} == hm_freefall
+PRINT hm_freefall
+HELPER race_1_lap_hm_freefall.helper
+ENDIF
+
+
 IF {TRACK} == hm_frozen_route
 PRINT hm_frozen_route
 HELPER race_1_lap_hm_frozen_route.helper
+ENDIF
+
+
+IF {TRACK} == hm_landslide
+PRINT hm_landslide
+HELPER race_1_lap_hm_landslide.helper
+ENDIF
+
+IF {TRACK} == hm_leap_of_faith
+PRINT hm_leap_of_faith
+HELPER race_1_lap_hm_leap_of_faith.helper
 ENDIF
 
 IF {TRACK} == hm_mountain_poles
@@ -71,16 +138,50 @@ PRINT mw_gold_rush
 HELPER race_1_lap_mw_gold_rush.helper
 ENDIF
 
+
+IF {TRACK} == mw_trainspotter
+PRINT mw_trainspotter
+HELPER race_1_lap_mw_trainspotter.helper
+ENDIF
+
 IF {TRACK} == mw_transcontinental_race
 PRINT mw_transcontinental_race
 HELPER race_1_lap_mw_transcontinental_race.helper
-
 ENDIF
 
 IF {TRACK} == mw_whirlwind_curve
 PRINT mw_whirlwind_curve
 HELPER race_1_lap_mw_whirlwind_curve.helper
 ENDIF
+
+
+IF {TRACK} == ny_the_city_that_never_sleeps
+PRINT ny_the_city_that_never_sleeps
+HELPER race_1_lap_ny_the_city_that_never_sleeps.helper
+ENDIF
+
+
+IF {TRACK} == ny_leaps_and_bounds
+PRINT ny_leaps_and_bounds
+HELPER race_1_lap_ny_leaps_and_bounds.helper
+ENDIF
+
+IF {TRACK} == ny_subway_surfing
+PRINT ny_subway_surfing
+HELPER race_1_lap_ny_subway_surfing.helper
+ENDIF
+
+IF {TRACK} == ny_uptown
+PRINT ny_uptown
+HELPER race_1_lap_ny_uptown.helper
+ENDIF
+
+
+IF {TRACK} == ny_quantum_jumps
+PRINT ny_quantum_jumps
+HELPER race_1_lap_ny_quantum_jumps.helper
+ENDIF
+
 
 
 IF {TRACK} == os_budding_start
@@ -110,15 +211,42 @@ HELPER race_1_lap_os_naniwa_tour.helper
 ENDIF
 
 
+IF {TRACK} == os_namba_park
+PRINT os_namba_park
+HELPER race_1_lap_os_namba_park.helper
+ENDIF
+
+
+IF {TRACK} == os_rat_race
+PRINT os_rat_race
+HELPER race_1_lap_os_rat_race.helper
+ENDIF
+
 IF {TRACK} == os_refined_finish
 PRINT os_refined_finish
 HELPER race_1_lap_os_refined_finish.helper
 ENDIF
 
 
+IF {TRACK} == os_sakura_castle
+PRINT os_sakura_castle
+HELPER race_1_lap_os_sakura_castle.helper
+ENDIF
+
 IF {TRACK} == rm_ancient_rome
 PRINT rm_ancient_rome
 HELPER race_1_lap_rm_ancient_rome.helper
+ENDIF
+
+
+IF {TRACK} == rm_bread_and_circuses
+PRINT rm_bread_and_circuses
+HELPER race_1_lap_rm_bread_and_circuses.helper
+ENDIF
+
+IF {TRACK} == rm_roman_byroads
+PRINT rm_roman_byroads
+HELPER race_1_lap_rm_roman_byroads.helper
 ENDIF
 
 IF {TRACK} == rm_capital_of_the_world
@@ -141,6 +269,12 @@ PRINT rm_saint_peter_kickoff
 HELPER race_1_lap_rm_saint_peter_kickoff.helper
 ENDIF
 
+
+IF {TRACK} == rm_tiber_cross
+PRINT rm_tiber_cross
+HELPER race_1_lap_rm_tiber_cross.helper
+ENDIF
+
 IF {TRACK} == rm_tiber_stream
 PRINT rm_tiber_stream
 HELPER race_1_lap_rm_tiber_stream.helper
@@ -153,6 +287,12 @@ PRINT sf_city_by_the_bay
 HELPER race_1_lap_sf_city_by_the_bay.helper
 ENDIF
 
+
+IF {TRACK} == sf_city_dash
+PRINT sf_city_dash
+HELPER race_1_lap_sf_city_dash.helper
+ENDIF
+
 IF {TRACK} == sf_downtown_rise
 PRINT sf_downtown_rise
 HELPER race_1_lap_sf_downtown_rise.helper
@@ -161,6 +301,13 @@ ENDIF
 IF {TRACK} == sf_roller_coaster_ride
 PRINT sf_roller_coaster_ride
 HELPER race_1_lap_sf_roller_coaster_ride.helper
+ENDIF
+
+
+
+IF {TRACK} == sf_railroad_bustle
+PRINT sf_railroad_bustle
+HELPER race_1_lap_sf_railroad_bustle.helper
 ENDIF
 
 IF {TRACK} == sf_rush_minute
@@ -174,11 +321,37 @@ PRINT sf_tunnel_jam
 HELPER race_1_lap_sf_street_of_san_francisco.helper
 ENDIF
 
+
+
+IF {TRACK} == sf_the_tunnel
+PRINT sf_the_tunnel
+HELPER race_1_lap_sf_the_tunnel.helper
+ENDIF
+
 IF {TRACK} == sf_tunnel_jam
 PRINT sf_tunnel_jam
 HELPER race_1_lap_sf_tunnel_jam.helper
 ENDIF
 
+
+IF {TRACK} == sf_waterslide
+PRINT sf_waterslide
+HELPER race_1_lap_sf_waterslide.helper
+ENDIF
+
+
+IF {TRACK} == sh_double_roundabout
+PRINT sh_double_roundabout
+HELPER race_1_lap_sh_double_roundabout.helper
+ENDIF
+
+
+
+
+IF {TRACK} == sh_future_road
+PRINT sh_future_road
+HELPER race_1_lap_sh_future_road.helper
+ENDIF
 
 IF {TRACK} == sh_nanjing_stroll
 PRINT sh_nanjing_stroll
@@ -191,9 +364,23 @@ PRINT sh_the_pearl_of_orient
 HELPER race_1_lap_sh_the_pearl_of_orient.helper
 ENDIF
 
+
+
+IF {TRACK} == sh_paris_of_the_east
+PRINT sh_paris_of_the_east
+HELPER race_1_lap_sh_paris_of_the_east.helper
+ENDIF
+
 IF {TRACK} == sh_pudong_rise
 PRINT sh_pudong_rise
 HELPER race_1_lap_sh_pudong_rise.helper
+ENDIF
+
+
+
+IF {TRACK} == sh_reach_for_the_sky
+PRINT sh_reach_for_the_sky
+HELPER race_1_lap_sh_reach_for_the_sky.helper
 ENDIF
 
 IF {TRACK} == sh_shen_city
@@ -212,12 +399,27 @@ PRINT sl_the_cave
 HELPER race_1_lap_sl_the_cave.helper
 ENDIF
 
+
+IF {TRACK} == sl_the_enchanted_island
+PRINT sl_the_enchanted_island
+HELPER race_1_lap_sl_the_enchanted_island.helper
+ENDIF
+
 IF {TRACK} == sl_path_wind
 PRINT sl_path_wind
 HELPER race_1_lap_sl_path_wind.helper
+ENDIF
+
+
+IF {TRACK} == sl_rocky_valley
+PRINT sl_rocky_valley
+HELPER race_1_lap_sl_rocky_valley.helper
 ENDIF
 
 IF {TRACK} == sl_wildlands
 PRINT sl_wildlands
 HELPER race_1_lap_sl_wildlands.helper
 ENDIF
+
+Y
+

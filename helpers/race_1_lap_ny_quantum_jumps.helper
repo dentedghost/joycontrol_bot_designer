@@ -1,0 +1,7 @@
+FOR 40
+PRINT INNER LOOP
+waitrandom 2000 2250
+Y
+waitrandom 200 350
+Y
+NEXT

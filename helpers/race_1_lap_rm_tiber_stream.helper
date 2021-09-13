@@ -1,6 +1,6 @@
 PRINT rm_saint_peter_kickoff race
 
-FOR 5
+FOR 8
 PRINT INNER LOOP
 RIGHT
 waitrandom 1000 1250
@@ -10,7 +10,7 @@ Y
 NEXT
 
 
-FOR 31
+FOR 19
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250
@@ -18,3 +18,13 @@ Y
 waitrandom 200 350
 Y
 NEXT
+
+FOR 9
+PRINT INNER LOOP
+
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+

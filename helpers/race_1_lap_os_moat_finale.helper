@@ -1,9 +1,19 @@
 PRINT os_moat_finale race
 
-
-FOR 55
+FOR 5
 PRINT INNER LOOP
 LEFT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+
+
+FOR 37
+PRINT INNER LOOP
+RIGHT
 waitrandom 1000 1250
 Y
 waitrandom 200 350

@@ -17,16 +17,17 @@ def script():
     print("Inside detection_track")
 
     start_time = time.time()
-    seconds = 180
+    seconds = 90
     track_name = ''
 
     image_path = "scripts/images/"
 
     tracks = [
-        'cb_beach_landing', 'cb_thundering_start', 'cb_paradise_resort', 'cb_pier_pressure',
+        'cb_beach_landing', 'cb_paradise_resort', 'cb_pier_pressure', 'cb_thundering_start',
         'ci_ancient_wonders', 'ci_nile_river', 'ci_thousand_minarets',
         'hm_cave_heat', 'hm_downhill_run', 'hm_frozen_route', 'hm_mountain_poles',
         'mw_canyon_launch', 'mw_gold_rush', 'mw_transcontinental_race', 'mw_whirlwind_curve',
+        'ny_the_city_that_never_sleeps', 'ny_leaps_and_bounds', 'ny_subway_surfing', 'ny_uptown', 'ny_quantum_jumps',
         'os_budding_start', 'os_industrial_revolution', 'os_kita_run', 'os_moat_finale',
         'os_naniwa_tour', 'os_refined_finish',
         'rm_ancient_rome', 'rm_capital_of_the_world', 'rm_eternal_city', 'rm_pantheon_split', 'rm_saint_peter_kickoff',
@@ -45,13 +46,19 @@ def script():
         match = np.array(Image.open(path_plus_track).convert('RGB')).ravel()
         track_images.update({track: match})
 
+    loading_race_expected_image = image_path + 'loading_race' + ".png"
+    loading_race_image = np.array(Image.open(loading_race_expected_image).convert('RGB')).ravel()
+    track_images.update({'loading_race': loading_race_image})
+
     waiting_for_players_expected_image = image_path + 'waiting_for_players' + ".png"
     waiting_for_players_image = np.array(Image.open(waiting_for_players_expected_image).convert('RGB')).ravel()
     track_images.update({'waiting_for_players': waiting_for_players_image})
 
+    current_loading_race_image = image_path + 'current_loading_race' + ".png"
     current_track_expected_image = image_path + 'current_track_image' + ".png"
     current_waiting_for_players_expected_image = image_path + 'current_waiting_for_players' + ".png"
 
+    detected_loading_race = False
     detected_track = False
     detected_track_name = ''
 
@@ -67,13 +74,14 @@ def script():
         # Load images, convert to RGB, then to numpy arrays and ravel into long, flat things
         im_current = pyautogui.screenshot(current_track_expected_image, region=(3065, 75, 75, 75))
         current = np.array(Image.open(current_track_expected_image).convert('RGB')).ravel()
-
+        # TODO increament track and if no match save into possible tracks, maybe time stamp or move into directory
+        #  maybe delete
         for track in tracks:
 
             # Calculate the sum of the absolute differences divided by number of elements
             image_match_percentage = np.sum(np.abs(np.subtract(current, track_images[track], dtype=np.float))) / current.shape[0]
 
-            if image_match_percentage < 1:
+            if image_match_percentage < 2:
                 print(str(image_match_percentage) + ' ' + str(track))
                 detected_track_name = track
                 detected_track = True
@@ -84,21 +92,24 @@ def script():
 
         # print(f'Check if no track')
         # Check if there's a track we don't have
-        im_current = pyautogui.screenshot(current_waiting_for_players_expected_image, region=(3010, 60, 40, 40))
+        im_current = pyautogui.screenshot(current_loading_race_image, region=(3010, 60, 40, 40))
 
         # Load images, convert to RGB, then to numpy arrays and ravel into long, flat things
-        current = np.array(Image.open(current_waiting_for_players_expected_image).convert('RGB')).ravel()
+        current = np.array(Image.open(current_loading_race_image).convert('RGB')).ravel()
 
         # Calculate the sum of the absolute differences divided by number of elements
         image_match_percentage = np.sum(np.abs(np.subtract(current,
-                                                           track_images['waiting_for_players'],
+                                                           track_images['loading_race'],
                                                            dtype=np.float))) / current.shape[0]
         # print(str(image_match_percentage))
-        if image_match_percentage < 1:
+        if image_match_percentage < 2:
+            detected_loading_race = True
+        elif detected_loading_race:
             print(f'Unknown Track: Use Default')
             detected_track_name = 'default'
             detected_track = True
             break
+
 
     print("Check for end of waiting after sleeping")
     time.sleep(10)
@@ -123,7 +134,7 @@ def script():
                                                            track_images['waiting_for_players'],
                                                            dtype=np.float))) / current.shape[0]
         # print(str(image_match_percentage))
-        if image_match_percentage > 1:
+        if image_match_percentage > 2:
             print(f'Start the races')
             break
 

@@ -1,9 +1,26 @@
-PRINT sl_ancient_ruins race
+PRINT sl_ancient_ruins race (new attempt)
 
 
-FOR 35
+FOK 20
 PRINT INNER LOOP
+RIGHT
+waitrandom 500 650
+Y
+
+NEXT
+
+
+FOR 14
 LEFT
+waitrandom 1000 1250
+Y
+waitrandom 200 350
+Y
+NEXT
+
+
+FOR 13
+RIGHT
 waitrandom 1000 1250
 Y
 waitrandom 200 350

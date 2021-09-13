@@ -20,7 +20,7 @@ Y
 NEXT
 
 
-FOR 15
+FOR 7
 RIGHT
 waitrandom 1000 1250
 Y

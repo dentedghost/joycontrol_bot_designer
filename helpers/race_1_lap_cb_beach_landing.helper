@@ -1,6 +1,6 @@
 PRINT cb_beach_landing race opt_review
 
-FOR 12
+FOR 7
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250
@@ -9,7 +9,7 @@ waitrandom 200 350
 Y
 NEXT
 
-FOR 27
+FOR 32
 PRINT INNER LOOP
 RIGHT
 waitrandom 1000 1250

@@ -1,0 +1,29 @@
+# Time Travel
+
+
+FOR 18
+WAIT 500
+Y
+WAIT 500
+LEFT
+NEXT
+
+
+FOR 12
+WAIT 500
+Y
+WAIT 500
+RIGHT
+NEXT
+
+
+
+
+
+
+FOR 5
+WAIT 500
+Y
+WAIT 500
+
+NEXT

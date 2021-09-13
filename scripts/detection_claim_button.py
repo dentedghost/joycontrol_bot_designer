@@ -39,18 +39,18 @@ def script():
 
         # Calculate the sum of the absolute differences divided by number of elements
         image_match_percentage = np.sum(np.abs(np.subtract(current, match, dtype=np.float))) / current.shape[0]
-        if image_match_percentage < 1:
+        if image_match_percentage < 2:
             return True
 
         # Now check if the center button is displayed so we can skip
 
         im_current = pyautogui.screenshot('scripts/images/current_play_center_button.png',
-                                          region=(3220, 460, 40, 40))
+                                          region=(3140, 460, 25, 25))
         current = np.array(Image.open('scripts/images/current_play_center_button.png').convert('RGB')).ravel()
 
         # Calculate the sum of the absolute differences divided by number of elements
         image_match_percentage = np.sum(
             np.abs(np.subtract(current, match_play_center_button, dtype=np.float))) / current.shape[0]
         print(str(image_match_percentage))
-        if image_match_percentage < 1:
+        if image_match_percentage < 2:
             return False

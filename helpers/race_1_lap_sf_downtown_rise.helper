@@ -1,7 +1,7 @@
 PRINT sf_downtown_rise race opt_conf
 
 
-FOR 38
+FOR 40
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250

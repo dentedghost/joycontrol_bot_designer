@@ -39,5 +39,5 @@ def script():
         # Calculate the sum of the absolute differences divided by number of elements
         image_match_percentage = np.sum(np.abs(np.subtract(current, match, dtype=np.float))) / current.shape[0]
         print(str(image_match_percentage))
-        if image_match_percentage < 1:
+        if image_match_percentage < 2:
             return True

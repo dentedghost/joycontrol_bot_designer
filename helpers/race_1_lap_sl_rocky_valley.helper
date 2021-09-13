@@ -1,0 +1,10 @@
+PRINT sl_rocky_valley
+
+FOR 35
+waitrandom 200 350
+Y
+waitrandom 200 350
+Y
+waitrandom 1000 1250
+NEXT
+
