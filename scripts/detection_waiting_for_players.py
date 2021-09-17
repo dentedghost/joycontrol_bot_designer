@@ -3,6 +3,7 @@ import pyautogui
 from PIL import Image
 import time
 
+from scripts.share  import IMAGE_LEFT, IMAGE_TOP
 
 def script():
     print(f'Inside detection_waiting_for_players')
@@ -21,8 +22,10 @@ def script():
             print("Finished iterating in: " + str(int(elapsed_time)) + " seconds")
             return False
         else:
-
-            im_current = pyautogui.screenshot('ai/current_waiting_for_players.png', region=(3010, 60, 40, 40))
+            left_corner = IMAGE_LEFT + 10
+            top_corner = IMAGE_TOP + 10
+            im_current = pyautogui.screenshot('ai/current_waiting_for_players.png',
+                                              region=(left_corner, top_corner, 40, 40))
 
             # Load images, convert to RGB, then to numpy arrays and ravel into long, flat things
             current = np.array(Image.open('ai/current_waiting_for_players.png').convert('RGB')).ravel()
@@ -47,8 +50,10 @@ def script():
             print("Finished iterating in: " + str(int(elapsed_time)) + " seconds")
             return False
         else:
-
-            im_current = pyautogui.screenshot('ai/current_waiting_for_players.png', region=(3010, 60, 40, 40))
+            left_corner = IMAGE_LEFT + 10
+            top_corner = IMAGE_TOP + 10
+            im_current = pyautogui.screenshot('ai/current_waiting_for_players.png',
+                                              region=(left_corner, top_corner, 40, 40))
 
             # Load images, convert to RGB, then to numpy arrays and ravel into long, flat things
             current = np.array(Image.open('ai/current_waiting_for_players.png').convert('RGB')).ravel()

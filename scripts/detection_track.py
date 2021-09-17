@@ -4,6 +4,8 @@ import numpy as np
 from PIL import Image
 import time
 
+from scripts.share  import IMAGE_LEFT, IMAGE_TOP
+
 logging.config.dictConfig({
     'version': 1,
     'disable_existing_loggers': True,
@@ -72,7 +74,9 @@ def script():
             return 'default'
 
         # Load images, convert to RGB, then to numpy arrays and ravel into long, flat things
-        im_current = pyautogui.screenshot(current_track_expected_image, region=(3065, 75, 75, 75))
+        left_corner = IMAGE_LEFT + 65
+        top_corner = IMAGE_TOP + 25
+        im_current = pyautogui.screenshot(current_track_expected_image, region=(left_corner, top_corner, 75, 75))
         current = np.array(Image.open(current_track_expected_image).convert('RGB')).ravel()
         # TODO increament track and if no match save into possible tracks, maybe time stamp or move into directory
         #  maybe delete
@@ -92,7 +96,9 @@ def script():
 
         # print(f'Check if no track')
         # Check if there's a track we don't have
-        im_current = pyautogui.screenshot(current_loading_race_image, region=(3010, 60, 40, 40))
+        left_corner = IMAGE_LEFT + 10
+        top_corner = IMAGE_TOP + 10
+        im_current = pyautogui.screenshot(current_loading_race_image, region=(left_corner, top_corner, 40, 40))
 
         # Load images, convert to RGB, then to numpy arrays and ravel into long, flat things
         current = np.array(Image.open(current_loading_race_image).convert('RGB')).ravel()
@@ -124,7 +130,10 @@ def script():
         # else:
 
         # Check if there's a track we don't have
-        im_current = pyautogui.screenshot(current_waiting_for_players_expected_image, region=(3010, 60, 40, 40))
+        left_corner = IMAGE_LEFT + 10
+        top_corner = IMAGE_TOP + 10
+        im_current = pyautogui.screenshot(current_waiting_for_players_expected_image,
+                                          region=(left_corner, top_corner, 40, 40))
 
         # Load images, convert to RGB, then to numpy arrays and ravel into long, flat things
         current = np.array(Image.open(current_waiting_for_players_expected_image).convert('RGB')).ravel()
