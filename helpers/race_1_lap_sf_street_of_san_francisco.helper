@@ -1,11 +1,12 @@
 PRINT sf_street_of_san_francisco race opt
 
 
-FOR 40
+FOR 47
 PRINT INNER LOOP
 LEFT
-waitrandom 1000 1250
+waitrandom 600 750
 Y
-waitrandom 200 350
+LEFT
+waitrandom 600 750
 Y
 NEXT

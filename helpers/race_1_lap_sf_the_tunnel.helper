@@ -1,0 +1,10 @@
+PRINT sf_the_tunnel
+
+FOR 35
+waitrandom 200 350
+Y
+waitrandom 200 350
+Y
+waitrandom 1000 1250
+NEXT
+

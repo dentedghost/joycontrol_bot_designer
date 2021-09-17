@@ -3,7 +3,7 @@ PRINT World Series MP - {CAR}
 HELPER move_car_to.helper HOZL={HOZL} HOZR={HOZR} VERU={VERU} VERD={VERD}
 
 FOR {RACES}
-HELPER mp_1lap_complete_race_ai.helper
+HELPER mp_1lap_complete_race_ai_v7.helper
 NEXT
 
 # Check if car is in skip state or need to reset car tank

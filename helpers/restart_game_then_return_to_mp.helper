@@ -1,0 +1,93 @@
+PRINT Restart Asphalt 9
+
+waitrandom 3000 3250
+home
+waitrandom 3000 3250
+Y
+waitrandom 3000 3250
+A
+waitrandom 4000 4250
+A
+wait 120000
+A
+waitrandom 4000 4250
+A
+
+# HELPER after_finish_race_try_refill.helper
+HELPER move_car_to_heal.helper HEALHOZL={HEALHOZL} HEALHOZR={HEALHOZR} HEALVERU={HEALVERU} HEALVERD={HEALVERD}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.helper HEALHOZL={HEALHOZL} HEALHOZR={HEALHOZR} HEALVERU={HEALVERU} HEALVERD={HEALVERD}

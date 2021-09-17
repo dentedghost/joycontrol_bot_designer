@@ -41,22 +41,26 @@ a
 waitrandom 4000 4250
 a
 waitrandom 4000 4250
+b
+waitrandom 4000 4250
 up
 waitrandom 4000 4250
 up
 waitrandom 4000 4250
 a
-waitrandom 2000 2250
+waitrandom 4000 4250
 ENDIF
 
 
 IF detection_play_center_button.script
 PRINT Detected Play Center Button
 a
-waitrandom 1000 1250
+waitrandom 4000 4250
 ELSE
 a
-waitrandom 1000 1250
+waitrandom 4000 4250
+#a
+# waitrandom 4000 4250
 ENDIF
 
 PRINT END OF AI script

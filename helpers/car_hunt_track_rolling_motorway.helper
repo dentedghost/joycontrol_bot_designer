@@ -1,0 +1,16 @@
+# Rolling Motorway
+FOR 40
+WAIT 250
+Y
+WAIT 250
+LEFT
+NEXT
+
+
+FOR 15
+WAIT 500
+Y
+WAIT 500
+
+NEXT
+

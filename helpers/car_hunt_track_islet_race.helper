@@ -1,0 +1,18 @@
+# Islet Race
+
+FOR 9
+WAIT 500
+Y
+WAIT 500
+LEFT
+NEXT
+
+
+
+FOR 20
+WAIT 500
+Y
+WAIT 500
+RIGHT
+NEXT
+

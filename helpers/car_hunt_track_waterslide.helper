@@ -1,0 +1,19 @@
+# Waterslide
+
+
+FOR 11
+WAIT 500
+Y
+WAIT 500
+
+NEXT
+
+
+
+
+FOR 25
+WAIT 500
+Y
+WAIT 500
+LEFT
+NEXT

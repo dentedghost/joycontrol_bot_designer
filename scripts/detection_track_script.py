@@ -4,6 +4,8 @@ import pyautogui
 import numpy as np
 from PIL import Image
 
+from scripts.share  import IMAGE_LEFT, IMAGE_TOP
+
 
 # ffplay -f v4l2 -video_size 640x480 -framerate 60 -i /dev/video0 -left 3000 -top 50 -an -sn -noborder -window_title asphalt9
 # 0.0037925925925925926 mw_gold_rush.png
@@ -48,7 +50,9 @@ waiting_for_players_image = np.array(Image.open('images/waiting_for_players.png'
 track_images.update({'waiting_for_players': waiting_for_players_image})
 
 while True:
-    im_current = pyautogui.screenshot('images/current_track_image.png', region=(3065, 75, 75, 75))
+    left_corner = IMAGE_LEFT + 65
+    top_corner = IMAGE_TOP + 25
+    im_current = pyautogui.screenshot('images/current_track_image.png', region=(left_corner, top_corner, 75, 75))
     for track in tracks:
         # before = cv2.imread('current_image.png')
         # after = cv2.imread(track)
@@ -73,7 +77,10 @@ while True:
         # print("Image similarity", score)
 
     # Check if there's a track we don't have
-    im_current = pyautogui.screenshot('images/current_waiting_for_players.png', region=(3010, 60, 40, 40))
+    left_corner = IMAGE_LEFT + 10
+    top_corner = IMAGE_TOP + 10
+    im_current = pyautogui.screenshot('images/current_waiting_for_players.png',
+                                      region=(left_corner, top_corner, 40, 40))
 
     # Load images, convert to RGB, then to numpy arrays and ravel into long, flat things
     current = np.array(Image.open('images/current_waiting_for_players.png').convert('RGB')).ravel()

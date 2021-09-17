@@ -4,6 +4,8 @@ import pyautogui
 from PIL import Image
 import time
 
+from scripts.share  import IMAGE_LEFT, IMAGE_TOP
+
 logging.config.dictConfig({
     'version': 1,
     'disable_existing_loggers': True,
@@ -33,24 +35,28 @@ def script():
             return False
 
         # Load images, convert to RGB, then to numpy arrays and ravel into long, flat things
-        im_current = pyautogui.screenshot('scripts/images/current_claim_button.png', region=(3250, 370, 40, 40))
+        left_corner = IMAGE_LEFT + 250
+        top_corner = IMAGE_TOP + 320
+        im_current = pyautogui.screenshot('scripts/images/current_claim_button.png',
+                                          region=(left_corner, top_corner, 40, 40))
         current = np.array(Image.open('scripts/images/current_claim_button.png').convert('RGB')).ravel()
 
 
         # Calculate the sum of the absolute differences divided by number of elements
         image_match_percentage = np.sum(np.abs(np.subtract(current, match, dtype=np.float))) / current.shape[0]
-        if image_match_percentage < 1:
+        if image_match_percentage < 2:
             return True
 
         # Now check if the center button is displayed so we can skip
-
+        left_corner = IMAGE_LEFT + 140
+        top_corner = IMAGE_TOP + 270
         im_current = pyautogui.screenshot('scripts/images/current_play_center_button.png',
-                                          region=(3220, 460, 40, 40))
+                                          region=(left_corner, top_corner, 25, 25))
         current = np.array(Image.open('scripts/images/current_play_center_button.png').convert('RGB')).ravel()
 
         # Calculate the sum of the absolute differences divided by number of elements
         image_match_percentage = np.sum(
             np.abs(np.subtract(current, match_play_center_button, dtype=np.float))) / current.shape[0]
         print(str(image_match_percentage))
-        if image_match_percentage < 1:
+        if image_match_percentage < 2:
             return False

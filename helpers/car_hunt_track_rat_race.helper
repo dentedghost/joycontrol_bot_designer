@@ -1,0 +1,8 @@
+# RAT Race
+FOR 45
+WAIT 500
+Y
+WAIT 500
+
+NEXT
+

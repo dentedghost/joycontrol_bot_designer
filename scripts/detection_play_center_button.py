@@ -4,6 +4,8 @@ import pyautogui
 from PIL import Image
 import time
 
+from scripts.share  import IMAGE_LEFT, IMAGE_TOP
+
 logging.config.dictConfig({
     'version': 1,
     'disable_existing_loggers': True,
@@ -16,9 +18,9 @@ def script():
     pil_logger.setLevel(logging.INFO)
 
     start_time = time.time()
-    seconds = 30
+    seconds = 60
 
-    print("Inside detection_play center_button")
+    print("Inside detection_play center_button z")
     match = np.array(Image.open('scripts/images/play_center_button.png').convert('RGB')).ravel()
 
     while True:
@@ -32,12 +34,15 @@ def script():
             return False
 
         # Load images, convert to RGB, then to numpy arrays and ravel into long, flat things
-        im_current = pyautogui.screenshot('scripts/images/current_play_center_button.png', region=(3220, 460, 40, 40))
+        left_corner = IMAGE_LEFT + 279
+        top_corner = IMAGE_TOP + 410
+        im_current = pyautogui.screenshot('scripts/images/current_play_center_button.png',
+                                          region=(left_corner, top_corner, 25, 25))
         current = np.array(Image.open('scripts/images/current_play_center_button.png').convert('RGB')).ravel()
 
 
         # Calculate the sum of the absolute differences divided by number of elements
         image_match_percentage = np.sum(np.abs(np.subtract(current, match, dtype=np.float))) / current.shape[0]
         print(str(image_match_percentage))
-        if image_match_percentage < 1:
+        if image_match_percentage < 2:
             return True

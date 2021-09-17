@@ -1,0 +1,8 @@
+# Zeppelin Race
+FOR 36
+WAIT 500
+Y
+WAIT 500
+RIGHT
+NEXT
+
