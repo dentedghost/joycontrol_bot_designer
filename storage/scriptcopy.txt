@@ -1,79 +1,52 @@
-PRINT MP World Series Silver
+PRINT Car Hunt
 
-For 100
+FOR 30
 
+For 8
 
-# Acura, Hussarya, H2
-
-
-
+HELPER car_hunt_start_car_and_wait.helper
 
 
-HELPER race_1_lap_ai.helper CAR=acura RACES=8 HOZL=0 HOZR=0 VERU=0 VERD=0 HEALHOZL=0 HEALHOZR=1 HEALVERU=0 HEALVERD=0
+HELPER car_hunt_track_subterranean_dash.helper
 
+#HELPER car_hunt_track_rolling_motorway.helper
 
+#HELPER car_hunt_track_time_travel.helper
 
+#HELPER car_hunt_track_zeppelin_race.helper
 
-HELPER race_1_lap_ai.helper CAR=sarthe RACES=7 HOZL=0 HOZR=0 VERU=0 VERD=0 HEALHOZL=0 HEALHOZR=2 HEALVERU=1 HEALVERD=0
+#HELPER car_hunt_track_rat_race.helper
 
+# HELPER car_hunt_track_waterslide.helper
 
-HELPER race_1_lap_ai.helper CAR=hussarya RACES=7 HOZL=0 HOZR=0 VERU=0 VERD=0 HEALHOZL=3 HEALHOZR=0 HEALVERU=0 HEALVERD=1
+# HELPER car_hunt_track_sakaru_castle.helper
 
+# HELPER car_hunt_track_future_road.helper
 
-#
-#HELPER race_1_lap_ai.helper CAR=h2 RACES=8 HOZL=0 HOZR=0 VERU=0 VERD=0 HEALHOZL=1 HEALHOZR=0 HEALVERU=1 HEALVERD=0
-#
-#HELPER race_1_lap_ai.helper CAR=beast RACES=8 HOZL=0 HOZR=0 VERU=0 VERD=0 HEALHOZL=0 HEALHOZR=2 HEALVERU=0 HEALVERD=1
-#
-#
-#
-#
-#HELPER race_1_lap_ai.helper CAR=acura RACES=8 HOZL=0 HOZR=0 VERU=0 VERD=0 HEALHOZL=1 HEALHOZR=0 HEALVERU=0 HEALVERD=0
+# HELPER car_hunt_track_reach_for_the_sky.helper
 
+# HELPER car_hunt_track_islet_race.helper
 
+# HELPER car_hunt_track_city_dash.helper
 
-#HELPER race_1_lap_ai.helper CAR=maserati RACES=7 HOZL=0 HOZR=0 VERU=0 VERD=0 HEALHOZL=3 HEALHOZR=0 HEALVERU=0 HEALVERD=0
+# HELPER car_hunt_track_snow_vault.helper
 
-# Paused
+# HELPER car_hunt_track_the_enchanted_island.helper
 
-#IF detection_free_pack.script
-#waitrandom 3000 3250
-## Click on the most right car, to save place in memory
-#a
-#waitrandom 3000 3250
-#b
-#waitrandom 3000 3250
-#up
-#waitrandom 2000 2250
-#up
-#waitrandom 2000 2250
-#left
-#waitrandom 2000 2250
-#a
-#waitrandom 2000 2250
-#a
-#waitrandom 2000 2250
-#a
-#waitrandom 2000 2250
-#b
-#waitrandom 2000 2250
-#b
-#waitrandom 2000 2250
-#ENDIF
+# HELPER car_hunt_track_bread_and_circuses.helper
 
 
 
+HELPER car_hunt_finish_race.helper
 
-
-
-
-
-
-#NEXT
-#
-#
-#PRINT EXIT game and restart MP
-
-#HELPER restart_game_then_return_to_mp.helper  HEALHOZL=0 HEALHOZR=43 HEALVERU=0 HEALVERD=0
 
 NEXT
+
+# Wait 65 Minutes 7 * 9 = 2 * 7 = 14  63 -14 = 49 + 3 BUFFER
+FOR 57
+WAIT 60000
+Y
+NEXT
+
+NEXT
+
