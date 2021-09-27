@@ -57,7 +57,7 @@ waitrandom 1000 1250
 #waitrandom 1000 1250
 ENDIF
 
-IF detection_next_white_button.script
+IF detection_next_white_button_weekly.script
 PRINT Detected White Next Button
 b
 waitrandom 1000 1250
