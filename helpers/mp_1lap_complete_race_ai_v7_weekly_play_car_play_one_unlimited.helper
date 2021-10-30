@@ -1,7 +1,7 @@
 
-PRINT SELECT Car
-waitrandom 4000 4250
-a
+#PRINT SELECT Car
+#waitrandom 4000 4250
+#a
 #waitrandom 3000 3250
 
 
@@ -36,9 +36,20 @@ waitrandom 1000 1250
 #waitrandom 1000 1250
 ENDIF
 
-IF detection_next_button.script
-PRINT Detected Play Car Button
+
+IF detection_next_white_button.script
+PRINT Detected White Next Button
 b
+ BVXA
+ENDIF
+
+waitrandom 3000 3250
+
+
+
+IF detection_play_button_continuous.script
+PRINT Detected Play Car Button
+a
 waitrandom 1000 1250
 #ELSE
 #b
@@ -46,24 +57,16 @@ waitrandom 1000 1250
 ENDIF
 
 
-IF detection_next_white_button.script
-PRINT Detected White Next Button
-b
-waitrandom 1000 1250
-ENDIF
-
-waitrandom 3000 3250
-
-IF detection_play_center_button.script
-PRINT Detected Play Center Button
-a
-waitrandom 4000 4250
-#ELSE
+#IF detection_play_center_button.script
+#PRINT Detected Play Center Button
 #a
 #waitrandom 4000 4250
-#a
-# waitrandom 4000 4250
-ENDIF
+##ELSE
+##a
+##waitrandom 4000 4250
+##a
+## waitrandom 4000 4250
+#ENDIF
 
 
 

@@ -1,18 +1,60 @@
-PRINT MP World Series Weekly
+PRINT Car Hunt
+
+FOR 50
+
+For 7
+
+HELPER car_hunt_start_car_and_wait.helper
+
+# HELPER car_hunt_track_tiber_cross.helper
+
+
+# HELPER car_hunt_track_lighthouse.helper
+
+#HELPER car_hunt_track_subterranean_dash.helper
+
+#HELPER car_hunt_track_rolling_motorway.helper
+
+HELPER car_hunt_track_time_travel.helper
+
+#HELPER car_hunt_track_zeppelin_race.helper
+
+#HELPER car_hunt_track_rat_race.helper
+
+# HELPER car_hunt_track_waterslide.helper
+
+# HELPER car_hunt_track_sakaru_castle.helper
+
+# HELPER car_hunt_track_future_road.helper
+
+# HELPER car_hunt_track_reach_for_the_sky.helper
+
+# HELPER car_hunt_track_islet_race.helper
+
+# HELPER car_hunt_track_city_dash.helper
+
+# HELPER car_hunt_track_snow_vault.helper
+
+# HELPER car_hunt_track_the_enchanted_island.helper
+
+# HELPER car_hunt_track_bread_and_circuses.helper
 
 
 
+HELPER car_hunt_finish_race.helper
 
-
-
-
-
-FOR 300
-
-HELPER race_1_lap_ai_weekly_play_car_play.helper CAR=any RACES=1 HOZL=0 HOZR=0 VERU=0 VERD=0 HEALHOZL=0 HEALHOZR=0 HEALVERU=0 HEALVERD=0
 
 NEXT
 
+# Wait 65 Minutes 7 * 9 = 2 * 6 = 14  63 -15 = 42 + 1 BUFFER
+# FOR 57
+# 6 = 43
+# 7 = 50
+# 8 = 55
+FOR 50
+WAIT 60000
+Y
+NEXT
 
-
+NEXT
 

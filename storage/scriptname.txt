@@ -1,1 +1,1 @@
-_mp_v6_0_weekly_one_car_with_multiple_options.bot
+_car_hunt_tester_one_car_continuous.bot
