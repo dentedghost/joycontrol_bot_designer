@@ -14,7 +14,7 @@ a
 ENDIF
 
 PRINT Next
-HELPERSCRIPT mp_1lap_optimized_track_ai.helper TRACK=detection_track.script
+HELPERSCRIPT mp_1lap_optimized_track_ai.helper TRACK=detection_track_short.script
 
 
 

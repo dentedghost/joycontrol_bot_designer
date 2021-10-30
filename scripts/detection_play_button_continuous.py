@@ -18,10 +18,10 @@ def script():
     pil_logger.setLevel(logging.INFO)
 
     start_time = time.time()
-    seconds = 60
+    seconds = 30
 
     print("Inside detection_play_car_button")
-    match = np.array(Image.open('scripts/images/play_car_button.png').convert('RGB')).ravel()
+    match = np.array(Image.open('scripts/images/play_button_continuous.png').convert('RGB')).ravel()
 
     while True:
 
@@ -34,11 +34,11 @@ def script():
             return False
 
         # Load images, convert to RGB, then to numpy arrays and ravel into long, flat things
-        left_corner = IMAGE_LEFT + 493
+        left_corner = IMAGE_LEFT + 280
         top_corner = IMAGE_TOP + 410
-        im_current = pyautogui.screenshot('scripts/images/current_play_car_button.png',
-                                          region=(left_corner, top_corner,  40, 40))
-        current = np.array(Image.open('scripts/images/current_play_car_button.png').convert('RGB')).ravel()
+        im_current = pyautogui.screenshot('scripts/images/current_play_button_continuous.png',
+                                          region=(left_corner, top_corner,  20, 20))
+        current = np.array(Image.open('scripts/images/current_play_button_continuous.png').convert('RGB')).ravel()
 
 
         # Calculate the sum of the absolute differences divided by number of elements

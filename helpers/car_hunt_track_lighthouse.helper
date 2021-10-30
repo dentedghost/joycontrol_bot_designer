@@ -1,0 +1,16 @@
+# Light House
+FOR 20
+WAIT 750
+Y
+WAIT 250
+LEFT
+NEXT
+
+
+FOR 15
+WAIT 500
+Y
+WAIT 500
+
+NEXT
+
