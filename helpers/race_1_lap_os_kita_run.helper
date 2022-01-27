@@ -1,7 +1,7 @@
 PRINT os_kita_run race opt
 
 
-FOR 27
+FOR 30
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250
@@ -10,7 +10,7 @@ waitrandom 200 350
 Y
 NEXT
 
-FOR 15
+FOR 12
 PRINT INNER LOOP
 RIGHT
 waitrandom 1000 1250

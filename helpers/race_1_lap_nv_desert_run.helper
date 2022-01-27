@@ -1,18 +1,12 @@
-PRINT hm_mountain_poles race opt_conf
-
-
-FOR 15
+FOR 8
 PRINT INNER LOOP
-RIGHT
-waitrandom 1000 1250
+waitrandom 2000 2250
 Y
 waitrandom 200 350
 Y
 NEXT
 
-
-
-FOR 10
+FOR 7
 PRINT INNER LOOP
 LEFT
 waitrandom 1000 1250
@@ -21,14 +15,10 @@ waitrandom 200 350
 Y
 NEXT
 
-
-
-FOR 27
+FOR 23
 PRINT INNER LOOP
-RIGHT
-waitrandom 1000 1250
+waitrandom 2000 2250
 Y
 waitrandom 200 350
 Y
 NEXT
-
