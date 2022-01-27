@@ -153,11 +153,40 @@ IF {TRACK} == mw_whirlwind_curve
 PRINT mw_whirlwind_curve
 HELPER race_1_lap_mw_whirlwind_curve.helper
 ENDIF
+"nv_dam_buster", "nv_desert_drift", "nv_desert_run", 'nv_long_run', "nv_the_curve",
+
+IF {TRACK} == nv_dam_buster
+PRINT nv_dam_buster
+HELPER race_1_lap_ny_the_city_that_never_sleeps.helper
+ENDIF
+
+IF {TRACK} == nv_desert_drift
+PRINT nv_desert_drift
+HELPER race_1_lap_nv_desert_drift.helper
+ENDIF
+
+IF {TRACK} == nv_desert_run
+PRINT nv_desert_run
+HELPER race_1_lap_nv_desert_run.helper
+ENDIF
+
+
+IF {TRACK} == nv_long_run
+PRINT nv_long_run
+HELPER race_1_lap_nv_long_run.helper
+ENDIF
+
+IF {TRACK} == nv_the_curve
+PRINT nv_the_curve
+HELPER race_1_lap_nv_the_curve.helper
+ENDIF
+
+
 
 
 IF {TRACK} == ny_the_city_that_never_sleeps
 PRINT ny_the_city_that_never_sleeps
-HELPER race_1_lap_ny_the_city_that_never_sleeps.helper
+HELPER race_1_lap_nv_dam_buster.helper
 ENDIF
 
 

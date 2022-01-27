@@ -2,8 +2,7 @@
 
 
 
-
-FOR 18
+FOR 20
 WAIT 500
 Y
 WAIT 500
@@ -15,6 +14,7 @@ FOR 14
 WAIT 500
 Y
 WAIT 500
-LEFT
+y
 NEXT
+
 

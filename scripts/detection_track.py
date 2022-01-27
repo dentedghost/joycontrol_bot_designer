@@ -30,6 +30,7 @@ def script():
         'hm_cave_heat', 'hm_downhill_run', 'hm_frozen_route', 'hm_mountain_poles',
         'mw_canyon_launch', 'mw_gold_rush', 'mw_transcontinental_race', 'mw_whirlwind_curve',
         'ny_the_city_that_never_sleeps', 'ny_leaps_and_bounds', 'ny_subway_surfing', 'ny_uptown', 'ny_quantum_jumps',
+        "nv_dam_buster", "nv_desert_drift", "nv_desert_run", 'nv_long_run', "nv_the_curve",
         'os_budding_start', 'os_industrial_revolution', 'os_kita_run', 'os_moat_finale',
         'os_naniwa_tour', 'os_refined_finish',
         'rm_ancient_rome', 'rm_capital_of_the_world', 'rm_eternal_city', 'rm_pantheon_split', 'rm_saint_peter_kickoff',
