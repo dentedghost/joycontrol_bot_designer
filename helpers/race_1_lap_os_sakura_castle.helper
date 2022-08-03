@@ -1,6 +1,7 @@
 PRINT os_sakura_castle
 
 FOR 35
+RIGHT
 waitrandom 200 350
 Y
 waitrandom 200 350
