@@ -1,0 +1,15 @@
+PRINT SELECT CAR AND WAIT FOR RACE
+waitrandom 2000 3000
+a
+waitrandom 2000 3000
+
+PRINT START CAR
+waitrandom 2000 3000
+X
+waitrandom 2000 3000
+PRINT an Extra to be sure and it doesn't hurt
+X
+WAIT 2000
+
+PRINT WAIT for Start
+14000

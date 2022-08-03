@@ -27,23 +27,34 @@ waitrandom 1000 1250
 #waitrandom 1000 1250
 ENDIF
 
+waitrandom 5000 5250
+
 IF detection_next_button.script
 PRINT Detected Play Car Button
 b
 waitrandom 1000 1250
-#ELSE
-#b
-#waitrandom 1000 1250
 ENDIF
 
 
-IF detection_next_white_button.script
+waitrandom 5000 5250
+
+
+IF detection_next_white_button_weekly.script
 PRINT Detected White Next Button
+waitrandom 1000 1250
 b
- BVXA
 ENDIF
 
 waitrandom 3000 3250
+
+
+IF detection_next_white_season_button.script
+PRINT Detected White Next Season Button
+b
+ENDIF
+
+waitrandom 3000 3250
+
 
 
 
