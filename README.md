@@ -59,7 +59,9 @@ If you have issues installing pycurl try installing this first
 ```sh
 sudo apt install libcurl4-openssl-dev libssl-dev
 ```
-
+```sudo pip3 install python3-xlib
+sudo pip3 install pyautogui
+```
 ### Installation
  
 1. Clone the joycontrol_bot_designer
