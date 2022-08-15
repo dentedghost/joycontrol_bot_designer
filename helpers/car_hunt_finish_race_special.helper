@@ -1,16 +1,16 @@
 PRINT WAIT for Race to Finish
-30000
+20000
 
 PRINT NEXT
-waitrandom 5000 6000
+waitrandom 9000 10000
 B
 PRINT NEXT
-waitrandom 4000 5000
+waitrandom 9000 10000
 B
 PRINT Get Rewards
-waitrandom 4000 5000
+waitrandom 9000 10000
 B
 PRINT Complete Race
-waitrandom 4000 5000
+waitrandom 9000 10000
 a
-waitrandom 4000 5000
+waitrandom 9000 10000
