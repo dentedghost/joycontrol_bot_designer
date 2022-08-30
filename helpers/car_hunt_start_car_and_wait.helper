@@ -5,10 +5,10 @@ waitrandom 2000 3000
 
 PRINT START CAR
 waitrandom 2000 3000
-a
+X
 waitrandom 2000 3000
 PRINT an Extra to be sure and it doesn't hurt
-a
+X
 WAIT 2000
 
 PRINT WAIT for Start

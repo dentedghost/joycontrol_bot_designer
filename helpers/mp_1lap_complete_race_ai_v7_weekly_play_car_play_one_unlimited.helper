@@ -8,7 +8,7 @@
 # PRINT Detect Play button
 IF detection_play_car_button.script
 PRINT Detected Play Car Button
-a
+X
 #ELSE
 #a
 ENDIF
