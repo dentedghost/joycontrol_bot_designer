@@ -6,6 +6,33 @@ PRINT default
 HELPER race_1_lap_default.helper
 ENDIF
 
+
+IF {TRACK} == ak_starting_grid
+PRINT default
+HELPER race_1_lap_default.helper
+ENDIF
+
+IF {TRACK} == ak_auckland_track
+PRINT default
+HELPER race_1_lap_default.helper
+ENDIF
+
+IF {TRACK} == ak_straights_and_hairpins
+PRINT default
+HELPER race_1_lap_default.helper
+ENDIF
+
+IF {TRACK} == ak_industrial_run
+PRINT default
+HELPER race_1_lap_default.helper
+ENDIF
+
+IF {TRACK} == ak_out_of_bounds
+PRINT default
+HELPER race_1_lap_default.helper
+ENDIF
+
+
 IF {TRACK} == cb_beach_landing
 PRINT cb_beach_landing
 HELPER race_1_lap_cb_beach_landing.helper

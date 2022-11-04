@@ -23,6 +23,7 @@ from scripts.share  import IMAGE_LEFT, IMAGE_TOP
 
 
 tracks = [
+    'ak_starting_grid', 'ak_auckland_track', 'ak_straights_and_hairpins', 'ak_industrial_run', 'ak_out_of_bounds',
     'cb_beach_landing', 'cb_thundering_start', 'cb_paradise_resort',
     'ci_ancient_wonders',
     'hm_cave_heat', 'hm_downhill_run', 'hm_frozen_route', 'hm_mountain_poles',
