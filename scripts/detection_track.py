@@ -25,6 +25,7 @@ def script():
     image_path = "scripts/images/"
 
     tracks = [
+        'ak_starting_grid', 'ak_auckland_track', 'ak_straights_and_hairpins', 'ak_industrial_run', 'ak_out_of_bounds',
         'cb_beach_landing', 'cb_paradise_resort', 'cb_pier_pressure', 'cb_thundering_start',
         'ci_ancient_wonders', 'ci_nile_river', 'ci_thousand_minarets',
         'hm_cave_heat', 'hm_downhill_run', 'hm_frozen_route', 'hm_mountain_poles',

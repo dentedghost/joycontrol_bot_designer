@@ -35,14 +35,14 @@ waitrandom 1000 1250
 #waitrandom 1000 1250
 ENDIF
 
-IF detection_next_button.script
-PRINT Detected Play Car Button
-b
-waitrandom 1000 1250
-#ELSE
+#IF detection_next_button.script
+#PRINT Detected Play Car Button
 #b
 #waitrandom 1000 1250
-ENDIF
+##ELSE
+##b
+##waitrandom 1000 1250
+#ENDIF
 
 
 IF detection_next_white_button.script
@@ -54,7 +54,7 @@ ENDIF
 waitrandom 3000 3250
 
 
-IF detection_next_white_button.script
+IF detection_next_white_season_button.script
 PRINT Detected White Next Button
 b
 waitrandom 1000 1250
